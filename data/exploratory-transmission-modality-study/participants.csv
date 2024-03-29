@@ -1,0 +1,618 @@
+participant_id,network_id,generation,condition,mean_trial_score,algorithm,algorithm_description
+47,2,0,Replication,0.960816326530612,1,"Always start with the second from the left and compare it to the first. Then move to the 3rd photo and try to move it left. If it does move, then try and move it left again. You must always make sure the picture is done moving before going back and moving to the next picture to the right that you have not done yet. Then once you get to the last photo on the left, you will be done."
+103,2,0,Replication,0.9024875845655066,1,"Start on square 2.  Try moving it left by one space. You are done with the first step.  At this point move to square three and try moving left by one space each time until the pictures don't switch.  Repeat with the pictures in 4, 5 and 6, ending each set when the picture fails to move left. "
+32,2,0,Replication,0.8947189895241843,1,"I started by choosing the second image and comparing it with the left one. I then went to the third image and compared it with images to its left until it wouldn't move any farther. Then I did the same with the fourth, fifth, and sixth images."
+16,2,0,Replication,0.8927823691460055,1,"1) sort 1 and 2.
+2) sort 2 and 3. If sorted, then move to sort 3 and 4. If not, then sort them first, then sort 1 and 2.
+3) sort 3 and 4. If sorted, then move to sort 4 and 5. If not, repeat step 2).
+4) similar as 3) to sort 5 and 6."
+73,2,0,Replication,0.8859245562130178,1,"I stated with the first two boxes, and if they didn't switch, I moved to the third box, then clicked the box to the left. Anytime one switched, I chose the box to the left again, until it no longer switched. Each time I got to a point where it didn't switch, I would pick the box to the right of the one I had just been using to move left."
+30,2,0,Replication,0.8759405651513543,1,"Click on the second choice, then the first. Whether it switches or not you move on to the third, and you repeat the process but this time with 2 then 1. Basically you do this with all of them, always going left all the way back to 1 until you encounter a non-match."
+55,2,0,Replication,0.8719013698034678,1,"Start with the card in the second slot. Try to move it LEFT to the #1 spot by clicking on the card in the first slot. Now go to the card in the #3 slot. Try also to move it LEFT to the #2 spot. If it moves to the #2 spot, now try to move it LEFT to the #1 spot. You will do this with each card slot, moving next to the card in the #4 slot and trying to move it LEFT as far as it will go, moving left to right. Then do the same with the card in the #5 slot, and finally the card in the #6 slot. "
+23,2,0,Replication,0.864525486723289,1,"I moved the pictures from left to the right. I tried to swap to the second left picture with the first one. If the swapped, I checked third one with the second picture. I continued the comparison until no more swap was possible."
+82,2,0,Replication,0.8633039110961189,1,"Always click on the 2nd tile first and then click on the 1st tile. Next, click on the 3rd and 2nd tile. If they swap then click the 2nd a 1st. Next, click on the 4th and 3rd tile. If they swap, then click on the 3rd and 2nd and if they swap, then click on the 2nd and 1st. Continue this pattern all the way through to the last tile."
+35,2,0,Replication,0.857245179063361,9,"Each position from left to right is 1-6. Swap 1 and 6, then 2 and 5, and then 3 and 4. Starting with 5, swap it with the position to the right (in this case 6) until it no longer moves. Then start with 4 and swap it with the position to the right (#5) until it no longer moves. Repeat starting with 3, 2, and 1. "
+74,2,0,Replication,0.8560633278135168,1,"Starting at the second picture try to switch it with the picture to the left. Then start at the third picture and try to switch it with each picture to the left until it no longer switches. Continue the process for all remaining pictures, switching towards the left. "
+57,2,0,Replication,0.8514961207069099,1,"The key is to do it systematically. You will focus on each image in turn and attempt to move them as far to the left as possible, one spot at a time.
+
+So to start, ignore the far left image, since you already can't move it any further to the left. Instead focus on the second image, and attempt to swap it with the image one place to the left of it. Regardless of whether it lets you are not, you are now done focusing on the second image, and can go on to the third.
+
+So consider the third image. Attempt to move it one space to the left. After this will be the first time you will have to make a decision. If it lets you move the third image to the left one space, continue to attempt to move this image one space at a time until you can no longer do so. Whenever you are unable to swap it, go on to the fourth image.
+
+Follow this pattern to the end. So for the fourth image, attempt to move it one space to the left till it no longer lets you, then move on to the fifth image. For the fifth image, do the same, one spot to the left at a time till it's no longer possible, and then finally the sixth and final image. Again move it one space to the left until no longer possible. When the image that was originally in the sixth position will no longer swap one position to the left, all the images are in the proper position.
+
+This will get you the solution every time without guesswork, and sometimes in a relatively short amount of moves, depending on your lucky you are."
+133,2,0,Replication,0.8500091827364555,9,"I began by mentally numbering each of the images from left to right 1, 2, 3, 4, 5, and 6. I compared 1 and 6, then 2 and 5, and then 3 and 4. I then selected the image in position 5 and compared it to 6. I then moved to the image in position 4 and compared it to 5, and if the image moved, I compared it to 6. I repeated this pattern for the images is positions 3, 2, and 1."
+89,2,0,Replication,0.8441327747621454,1,"There are 6 positions. First swap 1 and 2. Then swap 2 and 3. If they swapped, then check the new 2 and the one. That will correctly order 1, 2, 3. Now, check 3 and 4. If they swapped, then move back left till it doesnt swap any more. Then check 4 and 5. If they swap, then move back left till it doesnt swap any more. Finally check 5 and 6, and move back to the left till it doesnt swap any more. "
+141,2,0,Replication,0.8335726278383622,1,"Click the first two pictures. They will swap if in wrong order. 
+Then click on the 2nd and 3rd pictures, IF they swap then click on the 2nd and 1st pictures, if they don't swap move on to the next step below. 
+Next click on the 4th and 3rd pictures, IF they swap click on the 3rd and 2nd pictures, if they don't, then go to the last set and click on the 5th and 4th, IF they swap then continue moving to the left until they no longer swap. 
+If the pictures swap in any given sequence then you continue moving all the way back to the first picture. If they don't swap, then move to the right one picture and swap to the left until they don't swap any more. "
+19,2,0,Replication,0.829393545737202,1,"The basic idea is that you will successively try to move each image as far to the left as possible.
+Here's how: start with the 2nd image. Try to swap it with the first.
+Now go to the 3rd. Try to swap it with the image in position #2.
+If that works try to swap it with position #1.
+Now got to the 4th. Try to swap it with the 3rd. If that works, then try to swap it with the 2nd, and then the first if needed.
+Do the same procedure starting with position #5 and then #6."
+93,2,0,Replication,0.8290085361414032,1,"I started comparing the most left image (1st) with the next one (2nd) and then kept moving to the right, 2nd with 3rd, 3rd with 4th, 4th with 5th and 5th with 6th and so on, when an image swapped I compared it with all the images to its left until it didn't swapped or until it got to the first position."
+68,2,0,Replication,0.8256843855445254,1,select the 2nd image and the one on the left. Then select the 3rd and the one on the left. keep selecting until in correct order. then go to the 4th and to the left and so forth
+138,2,0,Replication,0.8244994188850331,1,"start with the second and first, if it moves then go to the second and third, anytime an image moves keep swapping to the left until it doesn't swap anymore, then go to the next item in line and do the same until nothing moves"
+48,2,0,Replication,0.8222741769694426,1,"In order to find the correct order, begin by selecting the second photo and swapping it with the first. Then, select the third photo and swap it with the second. If the third photo moves into the second spot, try swapping it with the first photo. Next, move to the fourth photo and swap it with the third. If it moves, continue swapping it backwards down the line until it stays in place. Then, move to the fifth photo, repeat the process, then the sixth, and repeat the process again. At that point, all photos will be in the correct spot."
+21,2,0,Replication,0.8206706114398423,1,"Start with the second one from the left. Compare it to the left image. If it doesn't switch then compare the third one to the second one. If it does switch then, compare the newly switched one to the left image and continue until it won't swap anymore. Continue to the process until you've reached the last one."
+15,2,0,Replication,0.8197769916717637,1,"I began with the second picture, moving it left to the first. Then I clicked the third picture and moved left until it stopped. Then I clicked the fourth and moved left until it stopped. I did this with the fifth and sixth pictures too. It was easy and uncomplicated to move that way."
+41,2,0,Replication,0.8154967110811266,1,"Start with 2 and trying swapping it with 1. Then, move on to 3 and try swapping it with 2. If it swaps, try swapping it with 1. After that, move on to image 4 and continue the process of trying to swap it with the image to the left."
+46,2,0,Replication,0.8151242386207421,1,"The first round starts from image 2. Click image 1. No matter what happens, the two images are now ordered correctly. The second round starts from image 3. It needs to compare with the two images on the left side. Click the image on the left first. If the two images do not swap, this round is done. If the images swap, click the first image once. After all, the first three images are ordered correctly. Continue this process until we reach the last image in the list."
+66,2,0,Replication,0.8118627648297977,1,I started with the left two objects and then kept selecting the one to the right until I had the correct option. 
+83,2,0,Replication,0.8112307583636256,9,"First I compared the last two images. Then second and third from last two, if they interchange then compare the second newest to first from right. If not, then move on two third and fourth from right."
+92,2,0,Replication,0.8106151213643722,1,"Work right to left, swapping until you cant anymore.  Start with the second image."
+145,2,0,Replication,0.8082732518896355,1,"Start with second picture and try to move it left. Continue down the line, moving the picture as left as it will go. "
+3,2,0,Replication,0.7996883303177009,1,"First, click on the image that is second from the left and compare it to the image to the left of it. Than move on to the next image and repeat the same process until they don't move."
+5,2,0,Replication,0.7996883303177009,1,"Compare 2 and 1.
+Compare 3 and 2.
+
+If 3 and 2 switched, compare the new 2 to 1.
+
+Compare 3 to 4. If they switch, compare the new 3 to both 2 and 1 until it stops switching.
+
+Then move on to comparing 4 and 5 and if they switch, keep comparing the one that switched all the way back to 1 until it stops switching.
+Repeat patter for 5 and 6.
+"
+65,2,0,Replication,0.7834621633223032,1,I compared the second image to the first. If the image moved I continued to check the moved image and the one to the left. Other wise I tried the next image to the right and the image that did not move. This worked okay. It was good some times but other times took a lot of checks.
+51,2,0,Replication,0.7787947938397488,1,"Switch the second and first image, if they switch, then select the third and second image. If they switch, then select the second and first image again. If not, move on to the fourth and third image. Keep this same pattern until you have gone through all of the pictures."
+25,2,0,Replication,0.7720470848942378,1,"I used the advice I received from someone else. 
+1. Start with the second tile from the left and try to swap if the left-most tile. 
+2. Continue trying to swap with each tile from left to right until no more swaps are possible. 
+
+This allows you to ensure every tile is in its place. "
+124,2,0,Replication,0.7719013698034678,1,"I started by clicking the 2nd image and then the first. Then I selected the 3rd image followed by the 2nd. If the 3rd image moved, I then continued to try every image to the left of it until it stopped. I continued this with the 4th-7th images left to right until each image stopped moving."
+0,2,0,Replication,0.7688618231862487,1,"Started left to right and whenever I was able to swap, I would start checking to the left with the image that was swapped to the left"
+139,2,0,Replication,0.7684719195920107,1,"Start on tile #2 and try to switch with the first. If it switches, then move on to tile #3 and try to switch with #2, if it switches try #1, if not, go to tile #4 and so on."
+109,2,0,Replication,0.7645640916969588,1,Start with the second picture and then click to the left. even if it moves or not click the third picture then the picture to the left and continue to move it to the left until it stops. Continue to do this
+10,2,0,Replication,0.7617523003137389,1,"Start by comparing #1 and #2.  Proceed by comparing #2 and #3, if they switch, compare #1 and #2 again.  Compare #3 and #4, if they switch, work back down (#3 and #2) (#2 and #1).  Repeat this same process working your way up to #6."
+108,2,0,Replication,0.7582639858630534,1,"I always start with 1 and 2. If 1 and 2 stay the same, then you know 2 can't go left any further. Then I pick 3 and compare it to 2. If it switches, then I switch 3 and 1. If not then I move on to 4, and compare it to 3. Each time I try to see how far left I can push the next photo. That helped me get down to about 9 comparisons by the end!"
+39,2,0,Replication,0.7560862802421243,1,"I clicked the #2, then #1. Then I clicked #3, then #2, and if those two switched, then I would click #2, then #1 to see if those switched as well. I would then work my way to the right. I would click #4 and #3, and if they switched I would continue to move to the left. If they did not switch, then I would keep going until I went all the way to #6."
+79,2,0,Replication,0.7558140916969589,1,i started with 2nd one and tried to switch with first and progressed one to right until it was done
+128,2,0,Replication,0.7519013698034678,1,"Start with the second to the left image, and compare it to the leftmost image. Then go to the third image and move it left until it stops moving. Repeat until you're out of images."
+72,2,0,Replication,0.7487353497318533,9,I started with the second to rightmost photo and compared it to the photo to the right until it could not more. I then went left to the next photo until there were no more.
+78,2,0,Replication,0.7377131049658521,1,"i started by swapping pic 2 with 1,
+and then 3 with 2, if it swapped then i swapped it again until it stops and went on like that "
+136,2,0,Replication,0.7318627648297978,1,My strategy involves starting with ordering the first three pictures and then comparing the rest to the one before it.
+120,2,0,Replication,0.7282732518896355,1,"Start at the beginning and compare the first image to the second image, then the third, fourth, fifth, etc. Whenever an image swaps, move to the right end and work backwards to make sure it is as far up as it needs to be."
+142,2,0,Replication,0.7263356336470721,1,click on the first square and move that one over to the right. if they swap click on the first picture you clicked on and move that one more to the right. if they swap click on the one that moved over and move that one to the left. if they swap then click on the first picture you clicked on and continue moving that one to the right. each time it swaps with the next picture click on the picture it swapped with and move that one to the farthest left. when it stops moving click continue clicking on the first picture you clicked on until that one stops moving. click finish
+76,2,0,Replication,0.7156279930437275,1,"Start with the second picture from the left. Compare it to the picture to it's left. Now click the third picture and compare it to picture to it's left. If it moves, keep comparing pictures to it's left until it stops moving. Since you sorted out the 1st, 2nd, and third slots, you don't have to touch them anymore. Do the same thing for the rest of the pictures."
+149,2,0,Replication,0.6918144356617993,1,"hit 1 and 2, if they do or don't switch okay. move 2/3 if 3 moves, try 1/2 again. keep moving down the row"
+90,2,0,Replication,0.6859275500833942,9,"I started at the right and moved one space to the left, and continued swapping that same piece until it couldnt go any further to the right."
+119,2,0,Replication,0.685319532159359,1,Start with second to left picture. Move it to the left if possible. Move one pic to the right and repeat.
+101,2,0,Replication,0.6834957525966128,1,"Go from left to right swapping first with the item to the right,  once there is a swap follow that to the left"
+44,2,0,Replication,0.6671644973130988,1,"Start with the second from the left and move it left until it can  no longer move. Then the third, etc all the way down the line."
+54,2,0,Replication,0.6653804182275711,1,"I tried to identify one that was out of order and used it to narrow things down, so it's sort of a process of elimination."
+53,2,0,Replication,0.6638934802571167,1,"Starting from the second image from the left, try to swap it with the image directly to the left. If it swaps, click on the third image from the left, and continually move it left until it can't go any further. Repeat this action with each image until they are in the correct order."
+18,2,0,Replication,0.6631127648297979,1,"I clicked on the second to the left and clicked on the first to swap. Then click on the one third one to the left and compare it to the second one. If it swaps, continue to click towards the left. Repeat this process if necessary. "
+105,2,0,Replication,0.6588594666516744,1,I STARTED WITH 1 AND 2 REGARDLESS OF SWITCH TRY 2 AND 3 THEN BACK TO 2 AND 1. THEN 3 AND 4 IF SWITCH KEEP GOING BACK UNITL THEY DONT. THEN 5 AND 6 AND GO ABCK UNITL THEY DON'T SWITCH
+37,2,0,Replication,0.6580170722828067,9,"I compared the first to the last. Then worked inward comparing second to fifth and third to fourth. Then I compared the fifth, fourth, third etc, in order working right until they would go no further. "
+111,2,0,Replication,0.6374320048644945,1,"Click the cards from left to right. If two swap, click the card that moves to the left, and the card to the left of that card, until they do not swap anymore. Then, click from left to right again, repeating the previous process until no more of them swap."
+123,2,0,Replication,0.6291542512321733,9,"I started by clicking on the right farthest picture and comparing it to the one of the left. If they switched, I would work from left to right checking their positions. If they did not switch, I would move forward to the next picture on the left. Continue this until all are unchanged. "
+115,2,0,Replication,0.6271905651513544,1,Start at the leftest. Check it against the one to the right of it; if it swaps check the left piece of the swap down the line (left-ways) until it stops
+38,2,0,Replication,0.6230385487528345,1,"I would start by swapping the first tile with the second tile from the left. Pretty much you start on the left side swapping the tiles, only ones that are right next to each other. and you work left to right almost walking tiles through the board. with only swapping tiles right next to each other the puzzle almost solves itself."
+95,2,0,Replication,0.6086568962106279,1,"I used the strategy of trying to move all images to the left starting with comparing position 2 with position 1, based on the result I moved over one position and compared it to the image to left and so forth. Sometime I would lose my chain of thought though so if I thought I had everything correct, I went ahead and compared everything left to right one last time. "
+43,2,0,Replication,0.6084979874302663,9,"Click on the two rightmost images, if they switch, pick the one which is not at the end with its neighbor until it does not move position any more. Start over at clicking two rightmost images. Repeat until image doesn't move. It definitely helps to remember which images you compared but did not move. "
+147,2,0,Replication,0.6071932902281332,1,I started with the second picture on the left and worked my way back comparing them
+28,2,0,Replication,0.6058667096029734,1,"I started by clicking the second spot and then the first and if it did or didn't switch, I would move one over to the irght and try and switch with the block to the left until it didn't switch. I did this until the last block to finish."
+131,2,0,Replication,0.5806853876597913,9,"I used a strategy of taking the picture second from the right and clicking the photo to the right of it everytime.  I would keep moving farther to the left as I got a picture that would not move any farther.  Once nothing moved, then I knew I had the right order."
+114,2,0,Replication,0.5730620593624256,1,"A) Click 2, then 1.
+B) Then 3->2. If they swap do 2->1.
+C) Then 4->3. If there is a swap do 3->2, then 2->1. Stop if they don't swap.
+D) 5->4, 4->3 and so on, stop if they don't swap.
+E) 6->5, 5->4... until there is no swap. Then you are done."
+42,2,0,Replication,0.5713310422788445,9,"I started on the right and compared 6 and 5.  If they didn't switch, I continued to compare 4 and 5.  If those switched, I rechecked starting on the right.  I continued working toward the left, rechecking anytime some of the pictures switched."
+64,2,0,Replication,0.5698905715974705,1,"Click on the 2nd picture to the left and swap it with the 1st. Click on the 3rd picture and swap it with the 2nd one, note that only if they swap, do the same with the new 2nd and 1st pictures.  Click on the 4th and 3rd pictures and not that if they swap, continue on the the 3rd and 2nd pictures until they stop swapping.   
+If the pictures do not switch, you then move on the the next picture to the right."
+143,2,0,Replication,0.5676202713037879,1,"Pick the second one in the series and see if it matches the first one. If it doesn't pick the third one in the series an see if it matches the second one. Work from left to right all the way across. If you get a match, see if the photo will work all the way to the left."
+134,2,0,Replication,0.5565107709750567,2,ANALYSE THE GIVEN PIC AND COMPARE 1ST FROM 2ND THEN 1ST RO 3RD AND AGAIN USE THIS SAME IN 2ND ALSO
+8,2,0,Replication,0.5555555555555556,2,I chose images from the left with the first image. Then I will repeat it for second image. After that I will repeat it for all the other images.
+130,2,0,Replication,0.5555555555555556,2,JUST FOLLOW THE INSTRUCTION
+49,2,0,Replication,0.5101094666516744,7,My strategy was to start at the picture to the left and see if it needs to move to the right one. If it doesn't move onto the next picture and see if it needs to be moved to the right or the left. It might need to be moved to more than one spot. I make sure each picture doesn't need to move to the right or left before finishing.
+33,2,0,Replication,0.5098829525222522,1,"start with the second picture, compare to the first.     if it moves, it is first.   then go the 3rd picture, compare to second and then to the first if needed.
+
+Make sure when you click on the picutre it outlines in a color and remember what the picture is!"
+106,2,0,Replication,0.5042357837541431,1,I prefer to start with the picture on the left and move it down through the pictures on the right and just keep using that strategy.
+102,2,0,Replication,0.5012147876744338,0,"First, I read the instructions provided by others so I could come up with a strategy. Based on that, I started with the first two images. I then used the first image and cross checked it with the remaining images (down the line). After I got the first image in place, I repeated the pattern using the remaining images. When I found an image that switched, I adjusted its placement so the ones I already identified as being ahead of one another, it would remain in order."
+9,2,0,Replication,0.4956944444444444,2,"I compared 1 with 2,3,4,5, and 6. Then I compared 2 with 3,4,5, and 6. Next I compared 3 with 4,5, and 6 and so on for a total of 15 comparisons."
+104,2,0,Replication,0.4885813947556371,0,"I clicked down the line, starting with the first to determine the placement of the first. "
+63,2,0,Replication,0.4865411275513283,7,i started left to right and moved everything i could and then i went from right to left to move everything until they were in the spot they were supposed to be
+20,2,0,Replication,0.4851150558842867,1,"I tried to follow the advice given by the top-earning participant, though still did many mistakes. Basically you need to start with the second picture from the left and keep checking all picture going from left to right. "
+14,2,0,Replication,0.4762787639710716,6,"Start by clicking on the first box, then click the last one. Next click on 1 and 5. Next 1 and 4. Next 1 and 3, Next 1 and 2.
+Do the same for the second place. Click on 6 and 2. Next 5 and 2. Next 4 and 2. Next 3 and 2.
+Do the same for third place.  Click on 6 and 3. Next 5 and 3. Next 4 and 3.
+Do the same for fourth place.  Click on 6 and 4. Next 5 and 4.
+Finally for fifth and sixth place.  Click on 6 and 5."
+12,2,0,Replication,0.4759405651513543,1,"I clicked on the first one and then clicked the one to the right of it. If they swapped, I chose the card to move to the left and then continued on to the next pair, moving the card left until it couldnt move anymore."
+27,2,0,Replication,0.4722034368307097,0,"I tried to compare the first one on the left with everything else and if one of them switched, I would then compare that one with everything else"
+99,2,0,Replication,0.4697222222222222,2,I COMPARED THE 1ST PICTURE TO THE REST OF ALL ANS 2ND TO REST AND VICE VERSA
+81,2,0,Replication,0.4683332484570028,8,"I just started at the left and compared two, then kept going to the right."
+113,2,0,Replication,0.4682993197278912,2,"I tried all possible options. I have chosen 1st and tried it with all others. Then, I tried second with others starting the third one."
+98,2,0,Replication,0.4580404654423583,3,Start with the second picture and try to move it back. Then go on to the next picture and try to move it back. Continue this process till the end.
+67,2,0,Replication,0.4562261669953978,2,that is so excite to me.
+59,2,0,Replication,0.4540039447731755,1,I started with the second from the left and kept going to the right
+144,2,0,Replication,0.4406963766478862,3,"I clicked the second from the left and the far left. Then the third from the left, clicking it with the second and then the first. I Then moved to the fourth, and followed this pattern all the way down until no changes happen."
+4,2,0,Replication,0.4358568099446612,1,"I tried to click on two images at a time, and then repeated that across the images. "
+40,2,0,Replication,0.4331838715878509,7,"click 2 and 1, if they swap do the same all the way to the right, then start with 5 and move left"
+36,2,0,Replication,0.4116185542077952,0,"Start with the very last picture in the row on the right. Then, move it to the left. Repeat until none of the pictures move. "
+118,2,0,Replication,0.4110950955681579,3,I clicked on the second image and then clicked the first then went down the line and clicked the the third image and clicked on the second then the first and did that through out the whole chain
+94,2,0,Replication,0.4082490907685104,3,"Click first and second box
+Then click third and second
+And then third and first
+Then third and fourth
+Third and second
+Third and first
+Then click fourth and fifth
+And check that one against each previous
+Go on with the fifth and sixth, Adjusting for any switches"
+122,2,0,Replication,0.404250361414836,8,I started from the left and continued to the end block and the went back and repeated the process until I felt I had them in order
+45,2,0,Replication,0.4016661590454076,0,"I began with the image second from the left and then would click on the first image, then clicked on the third and second, then fourth and third all the way until they didn't change anymore."
+110,2,0,Replication,0.3855621742970805,1,"I clicked on the second image. If that image moved to the left, I would click on it until I couldn't move it further. I then moved to the third image and repeated this process for all remaining images."
+137,2,0,Replication,0.381200518217368,0,"Going from right to left, tap on the last one and then the one next to it. If they flip, keeping left until the original last one no longer moves. Then repeat until no pictures move."
+112,2,0,Replication,0.3777777777777777,2,"A guaranteed easy way to get it in 15 comparisons every time... 
+
+1/2, 1/3, 1/4, 1/5, 1/6
+2/3, 2/4, 2/5, 2/6
+3/4, 3/5, 3/6
+4/5, 4/6
+5/6
+"
+135,2,0,Replication,0.373062079127225,1,"I tried to switch the first and last pieces and then moved from right to left. The times I was incorrect, it was usually due to not switching the second to the last and third to the last pieces properly."
+107,2,0,Replication,0.3592647157482322,12,I tried doing like the high scorer did . it worked pretty good until i messed up at the end.
+140,2,0,Replication,0.3491261615649338,0,My strategy was a bit random and worked about half the time. I would try cards that were next to each other from right to left over and over again and then repeat until I felt like I was done.
+61,2,0,Replication,0.3487626586746857,1,"I tried to go one by one through the pairs to see if the order was right. Then when one moved, I'd go back to try and match it with the previous, and if that didn't work I'd continue on and repeat."
+126,2,0,Replication,0.346558386106194,3,i compared second and first picture if no swap then compare third and second picture. Compare pictures with previous pictures until there's no swapping then move to next picture
+146,2,0,Replication,0.3395294784580499,0,THIS STUDY IS VERY INTERESTING
+17,2,0,Replication,0.3309834323319749,0,"I thought I was clicking left to right, and trying to swap."
+22,2,0,Replication,0.3308964233114321,1,Well I started out with looking at the photos as letters ABCDEF. I started switching it out using this way. Ab Ac Ad and so on it was way time consuming and only somewhat work. It wasn't until I realized that you should either do it AB BC if it switch at BC do BA  and so on. Also if the photo was already in the spot from the beginning such as it was in B place but moved to C  then it probably wont ever be in the B place again. 
+75,2,0,Replication,0.3165089923862653,0,I just try to go across but it took too many tries to make it worthwhile. I tried to get fancy by doing my own thing but it didn't work out well. Eventually I went with the strategies from a higher bonus player but by then it was too late. 
+86,2,0,Replication,0.3104724943327229,0,I used the strategy of clicking on one photo at a time and seeing what moved. See the strategy of the person who won 1.11 and use it. 
+77,2,0,Replication,0.3066800164402173,0,Clicked on the one on the right and the one next to it. then moved left to the other 2. then the other 2.
+50,2,0,Replication,0.3063240110859159,9,"Start on the far right. click on the far right (#6) and the one to the left of it (#5). 
+If they switch. Click the pic now in the inside position (#5) and the pic to the left (#4) - continue this process towards the left until no switch is made. 
+If they don't switch click pic #6 and pic #4 to see if they switch
+Using a progressively right to left process check each pic with the one to it's left and then work your way back left to right. If you think you're finished...Watch out for #3 and #5. double check that those won't switch before clicking on ""finished"""
+80,2,0,Replication,0.3032372164552095,9,I approached from both sides and worked my way inward
+125,2,0,Replication,0.2953697869261826,1,I move and compare each pictures.
+56,2,0,Replication,0.2888387535853814,10,"I click on the second box and then click the the fist box. Then click on box 3 then box 2, box 4 to box 3, box 5 to box 4, all the way to the 6th box. Click on the 6th box then the first box,  if those switch go to box 5 to box 1, then box 5 to 2 and so forth."
+100,2,0,Replication,0.2879500428284977,6,"Compare the first to the last, than the second to the 5th, and so on. If the pictures are swapped, start comparing the picture you just swapped with with the rest."
+132,2,0,Replication,0.2837091601926766,0,"Compare 1st card with 2nd, then 2nd with 3rd, then 3rd with 4th, etc. until you reach the end. Then go back to card 1 and repeat until none of the cards move anymore. "
+13,2,0,Replication,0.2682298288690065,3,"I started at the second image from the left and attempted to see whether it would switch positions with the image on the right. From there, I worked outwards until I reached the last image."
+87,2,0,Replication,0.268022765129747,0,"All you have to do is start with the first box and try to match it with every other box in the following pattern 1-2, 1-3. 1-4. 1-5. 1-6. If any of them switch start the pattern over until the 1st spot card can no longer move. Do this will all other spots. "
+2,2,0,Replication,0.2609044837663515,0,"After a while I just started working from left to right. The puzzle started highlighting things out of order, and that really screwed me up. Really unhappy with this buggy HIT."
+6,2,0,Replication,0.2566999212353857,0,i tried to use the first helper but the i just kept trying to switched them out till it would not any more 
+7,2,0,Replication,0.243438893181241,2,Select and compare all the one with the other one.
+62,2,0,Replication,0.2312356991346874,0,just compare images box by box until images don't move. remember the image you just moved
+127,2,0,Replication,0.2302017288358232,0,"I start with the image on the left and compare it to the image on the immediate right. If it switches I continue to move down the line. If the second image does not switch, I'll move to the next to the last image and work my way backwards. "
+85,2,0,Replication,0.2231411157751198,0,"I tried to eliminate any sort of question as to where each image is in the picture.  I clicked the first and last, and then worked in to the middle.  Once all those images had tried to be swapped I went back to the first picture and selected the picture next to that one and my worked my down the line.  I did that on all the images.  This assure you know the correct position."
+91,2,0,Replication,0.2138129622175445,0,I started at the right and worked my way to the left.
+26,2,0,Replication,0.2006932117260569,0,Click on the first image and then the second image and so on until the images don't move anymore. Continue until all the images don't move.
+71,2,0,Replication,0.1992038296800201,4,based on guess just moved images 
+70,2,0,Replication,0.1986863423712632,0,I tried working from left to right and comparing every picture until I got to the very end.
+84,2,0,Replication,0.1808356290174472,0,"My strategy did not work as well as I thought. So, I really have no strategy."
+121,2,0,Replication,0.1738751141415171,0,click the first 1 and then try to switch it with remaining 5. Then start at the other end and do the same. Once you have the ends figured out work on the middle ones. It worked as long as I made sure to check all the middles
+96,2,0,Replication,0.1671523518039856,0,"My strategy did not work well at all. I was trying to keep up with them, but it was too hard."
+24,2,0,Replication,0.1668055555555555,0,I tried to move icons from left to right and then when I hit the end I'd start moving backward
+58,2,0,Replication,0.1542269913505568,0,"Don't look at my strategy, only worked to the end. Change one by one starting from the left"
+29,2,0,Replication,0.1463802469135802,0,"I swapped the first 2 on the left, then tested the left most with each. Then compared to the ones next to each other in a random pattern."
+11,2,0,Replication,0.1443877919628748,0,"i continues changing all the pictures until it does not change anymore.
+"
+69,2,0,Replication,0.1212385758252745,0,I used the strategy from the highest paying example where I would start from the left and try shifting them over.
+60,2,0,Replication,0.1155555555555555,0,"This was hard. The easiest way for me to figure this out was to click box 1 and box 2 that were next to each other. If neither square flipped, they were probably correct. If they flipped places, I clicked the 2nd and 3rd box, then the 3rd and 4th box, the fourth and fifth box and the fifth and sixth box. If they were in the wrong position, they switched places. If they were likely in the right places already, they didn't move positions at all."
+148,2,0,Replication,0.1120286361312002,0,I had no strategy for this game.  I tried to follow the strategies for three others who earned the top bonuses from previous games but I still could not figure out how to play this game successfully.
+1,2,0,Replication,0.1,0,"Start by clicking the most memorable picture.  Then click the one next to it.  If this works, keep doing this one after another."
+88,2,0,Replication,0.1,0,I am unsure. Sorry
+117,2,0,Replication,0.1,0,I clicked the second choice after the first box one after another until the correct sequence was reached
+129,2,0,Replication,0.1,0,THIS IS NICE SURVEY THANK YOU SO MUCH 
+116,2,0,Replication,0.0421606648199446,0,I moved them around until they could no longer move
+31,2,0,Replication,0.0,0,Click the first image and then second image if it does not change click the third and fourth. Then click fifth and sixth image.
+34,2,0,Replication,0.0,0,"This whole game was very confusing. I do not have a strategy to tell you, other than to avoid doing this and find a better use of time that actually pays money."
+52,2,0,Replication,0.0,0,i tried to use picture association
+97,2,0,Replication,0.0,0,I honestly did not have a strategy. I found it very confusing and just tried moving the pieces around.
+422,3,0,Description,0.91426930711646,1,"1. Check 1st and 2nd position. 
+2. Check 2nd and 3rd position. If they swap, repeat step 1.
+3. Check 3rd and 4th position. If they swap, repeat step 2.
+4. Check 4th and 5th position. If they swap, repeat step 3.
+5. Check 5th and 6th position. If they swap, repeat step 4.
+
+Each time they swap, check it with the previous tile.
+"
+345,3,0,Description,0.8711692009613479,1,"1. Choose the second picture from the left, then the first one. They will either stay in place or change position.
+2. Choose the third picture from the left, then the second one. If they change position, repeat step 1. If they stay in place, move to step 3.
+3. Choose the forth picture from the left, then the third one. If they change position, repeat step 2. If they stay in place, move to step 4.
+4. Choose the fifth picture from the left, then the fourth one. If they change position, repeat step 3. If they stay in place, move to step 5.
+5. Choose the sixth picture from the left, then the fifth one. If they change position, repeat step 4. If they stay in place, you are done with the task."
+300,3,0,Description,0.7661706769199276,1,"Step 1: Check 1 & 2
+Step2: Check 2&3
+etc...."
+442,3,0,Description,0.7609359737831267,1,"Work from left to right. Try to imagine each picture in terms of the greatest value. Click on 1 and 2 to find which is greater. Then move on to 2 and 3, if one moves go back and check against 1, and continue down the line. "
+434,3,0,Description,0.7141429500920786,1,compare from first as you go. 
+372,3,0,Description,0.6878680027930777,6,"I just selected the left most tile then tried swapping with all the ones on the right, repeating that process until no more swaps happened."
+316,3,0,Description,0.6674183203853533,1,"First, click 2 and 1. Then, click 3 and 2. If switched, click 2 and 1. Then, click 4 and 3. If switched, click 3 and 2 and then 2 and 1. Then, click 5 and 4. If switched, click 4 and 3, then, if switched, 3 and 2, and, if switched, click 2 and 1."
+358,3,0,Description,0.6613412228796844,1,"The best advice I can give is start with the second image and compare it to the one on the left. If it doesn't move, then move onto the third image. Compare the third image to the second one. If it moves, compare it to the first one. If it doesn't, move onto the fourth image. Continue with this progression until you reach the end, and don't forget to finish the last image ranking because that is what messed me up."
+334,3,0,Description,0.645931382414899,1,"I found that if I start with the 1 position and try to switch it with 2.  If it does, then I try to switch 2 and 3. Then try 1 and 3.  Then try 4 and 2.  Working the numbers across to the left from the center then  from the center to the right after that works good too."
+423,3,0,Description,0.6363601618858473,1,"Start with the second image and then click on the left image until it doesn't swap with the previous image. If the second image swaps with the first one, go to the third image next. Click on the third image and then on the second one. If they swap then click on the first. Repeat this with all of the images. Basically, click on the right image then click on the left. If it swaps, continue moving down to the left. If they don't swap then move on to the next right image."
+383,3,0,Description,0.6358140916969589,9,Starting on the left I would compare the first and second images.  If they didn't switch I would compare image 3 to image 2.  I would repeat this down the line until everything was in the correct order. 
+392,3,0,Description,0.6216258268593433,1,I started with the fist two on the left and saw if they would switch. Then I went to the third from the left and switched with the second to left and then the one to the left if possible. I kept up that process until they were all in order.
+356,3,0,Description,0.6056003493953044,1,"Compare the first two. Then compare the second to the third, if they switch keep comparing to the left until they don't switch. Then move to the fourth and compare it moving left. Continue down the line."
+306,3,0,Description,0.5779977089455112,1,No strategy.
+377,3,0,Description,0.5647724003035359,4,"I would start with the first 2 pictures, then #2 and #3, then #3 and #4, and so on. Then I would start back from the beginning and check the ones that moved to see if they were now in order."
+407,3,0,Description,0.5556365978344,1,"Click on the box in current position #2 and #1.  They may or may not swap.  After that, click on box #3 and box #2.  If they swap then click on 2&1.  Keep checking your swaps by working right to left."
+339,3,0,Description,0.5555555555555556,2,"This is more organized
+Click as follows
+12
+13
+14
+15
+16
+23
+24
+25
+26
+34
+35
+36
+45
+46
+56"
+395,3,0,Description,0.5555555555555556,2,"Begin from the left. Pick the first two pictures. And then continue picking the first picture and pick picture 3, and then each other picture while also picking picture one.
+Then pick picture 2 and 3. Then continue picking picture 2 and all other pictures to the right of it.
+Continue this pattern with picture 3, 4 and 5 until all possibilities have been exhausted.
+It's a proven strategy that works every time."
+398,3,0,Description,0.55125,2,"Checked 1-2, 1-3, 1-4, 1-5, 1-6
+Then 2-3, 2-4, 2-5, 2-6
+Then 3-4, 4-5, 5-6
+Then 4-5, 5-6
+Then 5-6
+
+Works everytime"
+314,3,0,Description,0.5476816608996541,2,"yes , I used strategy is fast clicking."
+312,3,0,Description,0.5471712018140591,1,No use strategy.
+359,3,0,Description,0.5440274751475661,0,"I worked from the first picture on the left and compared it to the nearest picture to its' right. If they swapped, I would compare the picture to the next picture on its' right. If that picture also swapped I would iteratively compare pictures from left to right. If one picture did not swap with the picture nearest to its' right, I would stop swapping that picture and move on to the next nearest picture on the right and repeat the process until I was to the last picture. Once I was at the last picture, I would try to swap it with the next nearest picture to its' left. If it did not properly swap, I knew that the trial was over."
+438,3,0,Description,0.531890589569161,1,"I worked from left to right. If two cards swapped, then I went back and repeated the previous step or steps. Sometimes a card that was originally on the extreme right would end up in the first position."
+352,3,0,Description,0.5292851868996559,8,move in such a way that you can gauge the correct order.
+342,3,0,Description,0.5191634339686286,9,I chose the rightmost image and worked leftwards comparing until the ordered images did not switch 
+319,3,0,Description,0.5187280991988394,1,"I followed this strategy:
+*I compared tile 2 to tile1. 
+if tile 2 did not move, the I campared tile 3 to tile 2.
+else if tile moved, I would compare it to tile 1.
+* I follow the same steps with other tiles until I finish with all tiles
+"
+436,3,0,Description,0.5052607709750567,6,"I started comparing 1 to all the others, then 2, then 3 and so on."
+366,3,0,Description,0.5030927320503222,2,"Clicked on 1 and 2 to see if they switched. clicked on 1 and 3 to see if they switched. clicked on 1 and 4 to see if they switched, and so on."
+420,3,0,Description,0.5,2,just follow the instruction
+397,3,0,Description,0.4971064781085174,12,"The best option seems to be: start with the Right-most option and swap it with the one to the Left of it, repeat this until it gets all the way to the other side or it stops, if it stops go back to the Right and repeat until nothing moves."
+448,3,0,Description,0.4900612010090032,2,just follow the instructions
+363,3,0,Description,0.48969838921762,1,"Begin by clicking the two leftmost pictures.  See if they switch. If they do switch, then take new picture and test it against its left adjacent card.  Keep doing this until no cards move - aim to take between 9 and 12 turns. "
+374,3,0,Description,0.4895960260062824,1,"What I found worked best was to start by comparing the first two images. If they swapped, I then compared the second image to the third image. If they swapped, I compared the first image with the new second image. If they did not swap, I compared the second image to the fourth image. If at any point I compared images and there was a swap and one image moved further up the line, I then worked right to left to be sure all images in the beginning of the sequence were in order. I continued this process down the entire line until I was sure there could be no other swaps."
+412,3,0,Description,0.4835149942329873,14,"I took the last to the first, second last to the first, third last to the first until they were all finished. then started with the second. I brought the last to the second, last second to second and on and on until I finished."
+302,3,0,Description,0.4661000282465928,2,Start with the first choice and continue in order until a switch is made.  Every switch should follow with skipping one option and continuing in order.
+424,3,0,Description,0.4580640495313323,2,"I started from the left box and immediately clicked the image to the right.  I then kept clicking on the first box and then the subsequent box one more to the left.  Once I clicked on all the pairs, I then went to the second box and repeated to the left.  Then the third, forth, fifth....."
+385,3,0,Description,0.4544255177488611,8,"I started with the second picture from the left. At that point, I clicked the furthest picture to the left. If it switched, I then took the third picture from the left and continued clicking the picture immediately to its left."
+441,3,0,Description,0.4497052154195011,6,"compared the first to the rest, then 2nd to the rest and then third etc."
+384,3,0,Description,0.448882997026065,0,"I'd slowly make my way from left to right to determine the order of the images. I started with the left-most 2 images and compared them. I used image 1 as a kind of anchor and compared it to both images 2 and 3. If nothing happened I'd move onto the second image (my new anchor) and compare it with images 3 and 4 to see if there were any changes. If nothing happened, I'd keep making my way to the right until I ran out of images. If cards swapped, I'd repeat the same general strategy, but used the newly swapped image as my anchor image and compare it to the images around it. I also tried to keep track of the image pairs I'd already compared in my head."
+408,3,0,Description,0.4388900367309459,0,"Start at the first picture, then click the second picture. Continue all the way down the line of pictures until they no longer change positions."
+426,3,0,Description,0.4310241769694427,1,"click the first card and second card first, then move down the line, repeat this until nothing moves and change directions once to get to the end.  this may not be the most efficient way but it works more times than not."
+344,3,0,Description,0.4276218820861677,1,"Start with right side and compare to the next one #5. If the switch compare to #4. Keep comparing it to the next one if they switch. Then start with 5 and compare it again, and etc. I think the less turns the higher the bonus so don't switch too much to double check"
+349,3,0,Description,0.4133214081419654,1,Click the second tile then click the one to the left.  If the tile moves continue using this pattern on every tile after the second until it stops moving.
+417,3,0,Description,0.4121976413259351,0,I started from left to right and tried to find the first and last images first and then filled in from there.
+393,3,0,Description,0.4079401970410573,6,The strategy I used was to start with the first option and work my way back. this makes it easy to tell which one should be first and so on
+325,3,0,Description,0.4029904971948114,0,"Started with second from left.  Checked it again first, then down the line.  If they switched, I started over.  I ended by checking each one.  "
+308,3,0,Description,0.3993166704954528,0,"I tried going from left to right.  first I would click on the 1st photo, then the 2nd.  then if they didn't switch, I'd choose 1 and 3, and so on.  If the images switched then I'd go back from right to left down the line until the first one couldn't move anymore."
+309,3,0,Description,0.3929759378588938,0,"First I paired box 1 and 6. Then I paired box 2 and 5. I then check to see if box 2 is smaller than box 1. Next I check if box 3 is smaller than box 2. If they switch, I recheck to see if box 2 is smaller than box 1. I then went all the way along the remaining line to see if the box was smaller than box 6. If a box switches, I recheck it with the other boxes until they no longer switch."
+391,3,0,Description,0.383831922854839,4,"I just tested it down the line, clicking to see if the next icon matched or was out of place."
+381,3,0,Description,0.3791357217988508,0,I went left to right and click until there was nothing more to click. It was not the quickest but I got them all right.
+428,3,0,Description,0.375493998153278,2,"I tested each space by starting on one end, and going down the line to swap. For example, clicking 1 and 2, then 1 and 3, and then 1 and 5, and so on. After clicking the row, then I'd start with the second position and click 2 and 3, then 2 and 4, then 2 and 5, and on. I did this for all positions."
+303,3,0,Description,0.3737156682504282,0,"Click on the 1st two images. Keep clicking on the 1st and the proceeding images until the 1st no longer swaps. Now you know that is the 1st image. And then you would have also learned which are the top 3 images. After that, you can keep clicking on the remaining images to find out the rest of the order and minimize your clicks."
+350,3,0,Description,0.3713310422788444,7,I started from the left and tried swapping each pair until I got one that moved. Once I got one that moved at moved it as far as it would go and then from left to right tried the next one and so on until no more moved. After no more moved left to right I tried right to left on those previously unmoved.
+445,3,0,Description,0.3712932001742458,8,Compare each picture to the picture to the left until there are no more issues
+335,3,0,Description,0.370063389215471,1,By starting with the second images and working left from there to see if it first switches with the first tile. I then kept moving from left to right test each tile to see if I continued getting movement. 
+362,3,0,Description,0.3681798711129677,2,easy to understand
+406,3,0,Description,0.3673372781065089,0,"none, simply follow the instructions"
+311,3,0,Description,0.3655677069146635,0,I used a process of elimination to move from the left images to the right images. You can guess with less clicks but then you risk your bonus. Just pay attention to which images move to which spot.
+329,3,0,Description,0.3616712580348944,7,compare the first to the second then the second to the third and so on.
+338,3,0,Description,0.3584397472423114,2,"From the left, click first 2 pictures then first left till your far right, continue from second left through far right that third left thru far right etc till you reach end"
+364,3,0,Description,0.3522519697394433,2,Try to work from the left or right side by comparing one image to all the others.  After finding the image that is last or first move on the the next in line and so on.
+347,3,0,Description,0.346878081998114,0,One at a time moving the image to the right. It was not a great strategy
+418,3,0,Description,0.3414537996298222,8,choose the best
+401,3,0,Description,0.3402162203755002,2,"I just started with the first picture and clicked the one next to it. Then I clicked the one next to that, and so on down the line."
+449,3,0,Description,0.3343930550870485,0,SELCET THE 2ND IMAGE AND CLICK ON LEFT IMAGE KEEP ON DOING SAME FOR NEXT NEXT IMAGE UNTILL THE IMAGE NOT CHANGE
+365,3,0,Description,0.3290277777777778,2,"compare 2 to 1, 3 to 1, 4 to 1, 5 to 1, 6 to 1
+compare 3 to 2, 4 to 2, 5 to 2, 6 to 2
+compare 4 to 3, 5 to 3, 6 to 3
+compare 5 to 4, 6 to 4
+compare 6 to 5"
+405,3,0,Description,0.3282008077060024,1,"I always started with the second tile and compared that to the first one. If there wasn't any switching, I would move onto the third tile and compare to the second one. If that third tile moved, then I would compare it to the first one. My next move was then moving to the fourth tile and comparing to the third tile, and then if it moved I compared it to the 2nd tile and if it moved again I compared it to the first tile.
+
+I kept comparing and moving it up the row until it no longer started moving. Eventually nothing would move and I'd submit my answers."
+331,3,0,Description,0.3267738394104404,0,"I started at the left and compared the following image, if they didn't swap I selected the second image and compared it to the third, and if they didn't swap I kept doing the same until they changed. If one of the images swapped I would compare the left image that swapped to the other images before them. "
+343,3,0,Description,0.3265711010149847,0,"The best way is to switch the 1st and 2nd picture, doesn't matter if they switch or not, next you switch the 2nd and third, then the 3rd and 4th, then the 4th and 5th, then the 5th and 6th, then the 6th and 1st. then repeat until non switch that's it, That is the fastest way. "
+307,3,0,Description,0.3246229230441354,2,by click the image and comparison the image to get correct order
+330,3,0,Description,0.3239560737729235,0,I started from right to left and clicked on each image back and forth to see it if moved. I moved from the right side to the left side. I then repeated the same process moving left to right. 
+403,3,0,Description,0.3194298916843393,0,"Swap cards 1&2
+Swap cards 2&3, Continue pattern until no swaps"
+440,3,0,Description,0.3148202713037877,0,"I started from the left and worked my way all the way to the right swapping images. Then I went to the second and compared it to the fourth, third to the fifth, and fourth to the sixth. Then I went back from left to right to verify. Lots of comparisons but guaranteed bonus. "
+430,3,0,Description,0.3095238406855567,0,"Click first and second image.  If the flip, click the image that was 1st (now 2nd) and the 3rd image.  If it flips, repeat the step by moving to the right.  If when you clicked that first image, it did not flip, keeping clicking that first image along with the next image to the right until you've clicked all images.  Then, move to the second image and repeat the above steps."
+357,3,0,Description,0.3073611111111111,2,"Start on the left side and click through all the options to the right. Then move to the second one and click on all the options to the right. Repeat this with the third, fourth, and fifth images. This will be 15 comparisons and guarantee you are correct."
+390,3,0,Description,0.3016856056728295,4,"This didn't go well.  I had it great in the practice, but then when actually doing it, it didn't go as well.  I tried to find the left most one first by comparing to all the ones to the right. "
+409,3,0,Description,0.3012802933876251,2,"Just click in order from left to right,
+
+the first box then all the ones right of it. 
+
+then the second box...."
+389,3,0,Description,0.2771747306084968,6,I started from left to right. If the first two images swapped I continued down the line swapping with the first image that i clicked.
+425,3,0,Description,0.2766282188516445,0,I would compare the first image to the second and the second to the third until they are all in order.
+327,3,0,Description,0.2761111111111111,0,I tried to choose the left one than keep going util that one could not be moved anymore.
+332,3,0,Description,0.272754279478766,0,"Start at the right side of the board, and swap the last two pieces. Now keep on moving left until you can no longer swap them. Then work backwards, and swap everything behind of the leading piece. Repeatedly do that, and you should be able to get it right"
+348,3,0,Description,0.2665158525864098,2,"I tried to start at the first image and swap it with the second. If it didn't move, I would then try it with the next one down the line. When I got to the end of the line, I would then try that same strategy, but starting with the second image instead of the first."
+373,3,0,Description,0.264221954372415,0,"I didn't do great, it was kind of confusing. I did start to get better but all I did was start at the left picture and clicked until it stopped moving then moved to the next until everything stopped moving. "
+419,3,0,Description,0.2629475134860637,0,"Swipe the second picture from the left, then the third, fourth, fifth and sixth until the cycle stops. "
+375,3,0,Description,0.2613101536911061,2,"I was given the advice to start and the left and go to the right. That didn't work for me. I didn't get a good bonus but I had to check every one against each one. So I started with the first and went through the other 5, Then the second so forth and so on."
+410,3,0,Description,0.2608228186032617,0,I started out by clicking on the far left block and the far right block. I then clicked the far left block and each subsequent block until the far left block found its resting place. I then did the same thing with whichever block ended up in the far left (after my first series of clicks). I continued this process until I had placed all blocks in their rightful places. 
+353,3,0,Description,0.2593791653944355,1,I went from left to right and tried every combination I could. This strategy did not work well.
+310,3,0,Description,0.2541513745415861,2,"I click on the first and pair it with the rest, then moving on the second picture and pair it with the pic excluding the first, then keep on going till the end."
+317,3,0,Description,0.2520663265306122,0,I picked the 1st one and went down the line to see if they needed to be moved.  
+431,3,0,Description,0.2506488791834736,0,"I started from the left which would be the first image space and kept clicking the others until it swapped, when it did I would then move to the second space image and do the same technique of clicking the others in order and to make sure I wasn't tripping. I would click every image from previous clicks to the images straight ahead to make sure it was in the right place, I kept going to the third fourth etc until all the images have been swapped and nothing else was left to swap meaning nothing would switch which made me assume everything was in the right place which it was"
+361,3,0,Description,0.2489209403780018,0,"switch first and second. switch second with the third. If they switch, then switch second and first.
+switch third with fourth. If they do switch, then switch thirds with second and if they switch, switch second with first.
+Now follow that pattern for the fifth and sixth."
+346,3,0,Description,0.2433344811753902,0,"Click on the first 2, if the switch, clisk on first and third, first and 4th and so on."
+446,3,0,Description,0.243248738192682,0,u have to first take second to third. if it swamps good.again u have to take four to one.then fix one letter to each picture it will automatically swap confirm it and make it finished.
+371,3,0,Description,0.2431964740628761,0,I started with the first image and click the ones following untill it switched. then I went to the second image and clicked till it switched. Be carful it is easy to lose where you were in clicking when the game starts to lag.
+437,3,0,Description,0.2361791518034086,2,I started from the left. I then tried to swap. I then tested the swap against the remining choices. This process was repeated for the next block.
+443,3,0,Description,0.2337085294459421,0,Tried every image in a position then kept trying to see if they moved to any other position.
+429,3,0,Description,0.2258698250126213,0,"I tried different strategies.  In the end, I switched the first and the last each time.  I then chose the first and tested it against all others.  I did the same with each successive card.  Sometimes I accidentally hit the finish button too quickly.  I did this 3 times.  It also took me about 3 times to settle on the pattern.  I think that I could have made about .45 cents if I knew this pattern from the beginning and then did not make any mistakes."
+301,3,0,Description,0.2231774376417233,0,I tried to start from left to right and compared each image to the one to the right of it.
+414,3,0,Description,0.220036079617032,0,Clicked on first one and went threw them all. And repeated with each one until the didn’t swap.
+413,3,0,Description,0.2147731424994229,0,"I started with the first and second one, after that I went down the line comparing it to the rest. Then I did the same for the second photo and so on until all had been compared to each other."
+305,3,0,Description,0.2139505999058168,0,I click to the next image to the left and then repeat this process until I have the correct order. 
+324,3,0,Description,0.2090085361414032,0,"start from left to right, keep going until none left"
+369,3,0,Description,0.2079904716141547,14,"At first it was hard, but then I mastered how it works. It's simple, just go over all the photos verifying them one against the other until they can't swap anymore! Good luck!"
+433,3,0,Description,0.2077653007565418,14,we have to follow the instructions carefully we will score the extra bonus.
+320,3,0,Description,0.2068055555555555,0,"Click the first 2 pictures and if they moved, select the next one and work my way down until the pictures didn't move any longer"
+380,3,0,Description,0.2002469135802468,0,"My biggest mistake is not understanding how the movement works.  Once images are swapped, the image may not be in the correct order.  You need to verify the right order."
+376,3,0,Description,0.1992266846552499,0,I just went one by one.
+388,3,0,Description,0.1990200444332748,14,Comparing all images.
+427,3,0,Description,0.1953500102749021,0,"I started from the left, and moved to the right."
+394,3,0,Description,0.1949454531276766,14,"ALWAYS start from the left, and keep going right until you can't swap anymore. Double check to see if you swapped them all as well, because you could be forgetting something."
+432,3,0,Description,0.1940303884026827,10,Working from right to left is finally what helped me. Once I could not get the final right card to switch I could move on to the left side cards until they stuck in place.
+322,3,0,Description,0.1929226499407554,0,i tried to move the left most picture as far to the right as possible and then move on to the next image etc. it was hard to remember which image i had compared which slowed me down.
+368,3,0,Description,0.1898423257195985,0,Simple guess method i used 
+333,3,0,Description,0.1885011666994613,0,I used the process of elimination starting from the right I just went down the row checking them all.
+387,3,0,Description,0.1877919635947918,13,clicking on every picture
+435,3,0,Description,0.1755555555555555,0,not used strategy 
+340,3,0,Description,0.1751592684490842,0,I clicked on the first picture and the one next to it to see if the pictures moved or stayed the same. And I  continued this down the line until no pictures moved. Then I moved on the the next picture and did the same always clicking on the pictures to the right not the left.
+411,3,0,Description,0.1734690945412083,0,"Start with the leftmost image and check one-by-one to the right.  When an image moves to the right, keep checking to the right until it's in its spot and remember it.  Keep moving images from left to right, making sure each time that they've gone as far to the right as they can go"
+355,3,0,Description,0.170548609211569,0,I started with the last picture and compared with each one in front of it and kept doing that for all pictures.
+404,3,0,Description,0.1659434111001934,0,I started with one and then clicked on two. Then I clicked on one and then 3 and so on. I stopped when none of the boxes moved anymore. 
+323,3,0,Description,0.163656411511816,0,I started with the first and the second then I narrowed down to swap the remaining so that I could get the numbers that remained. 
+447,3,0,Description,0.1608163265306122,0,I didn't develop a strategy. I couldn't figure out how to do it definitively.
+396,3,0,Description,0.1546302227068317,0,click he 2nd square. Keep clicking the square compare to the following square on the right until it moves all the way down
+386,3,0,Description,0.1537911635242332,0,"At first I was trying to randomly match images which was not working at all.  Then I changed my strategy to ensure that I was comparing all images to each other at least once from the original order:
+
+Image 1, compare to 2, 3, 4, 5, 6
+Image 2, compare to 3,4,5,6
+Image 3, compare to 4,5,6
+Image 4, compare to 5,6
+Image 5, compare to 6
+
+You may want to keep notes as it can be confusing when they start moving around."
+337,3,0,Description,0.1370039425793004,0,It’s next to impossible.  Your best bet is to just click every possible combination. A waste of time.
+378,3,0,Description,0.1150189390061628,0,I started on the left and clicked to the right and moved them down until they wouldn't go any farther and then went back to the beginning and did that again.
+367,3,0,Description,0.1111111111111111,0,I didn't have much of a strategy. I just did my best to make sure I tried to swap every picture with every other one. It obviously didn't work very well!
+341,3,0,Description,0.1071523518039856,0,I clicked on the first one and then went down the row. I then clicked on the second one and went down the row. so on and so on.
+313,3,0,Description,0.1062536353414865,0,"You have to check every one with each picture in the line to make sure if it is in it's correct place.  for instance, check pic one with pick two, if they move then it needed to be moved and one of them is now in the correct place"
+336,3,0,Description,0.1008460817614518,14,"I tried to move the first item to the second and so forth. From there I would start with the next picture that was replaced by the first one, "
+328,3,0,Description,0.1,8,I tried to swap the second image for the next one
+354,3,0,Description,0.1,0,I don't use any strategy
+370,3,0,Description,0.1,0,I TRIED TO ITERATIVELY CLIVK IMAGES FROM LEFT TO RIGHT
+382,3,0,Description,0.1,0,"First clicked on option 1 and 2 
+and then 2 and 3
+new image with option 4
+option 5 and 6"
+400,3,0,Description,0.1,1,Start from the left and compare the first square with the one to its right. Continue from left to right.
+402,3,0,Description,0.1,0,follow the instructions.
+326,3,0,Description,0.0959413580246913,0,I try to compare images based on how they connect.
+439,3,0,Description,0.0923730189243453,0,I started from the first picture and clicked right. I kept clicking right until things switched. THIS DID NOT WORK. Follow someone else's advice. I consistently had a mistake in the 3/4 spot. 
+379,3,0,Description,0.0723647464525976,0,I tried to start with the first pic and then click to the right of it. Unfortunatly that did not work well
+315,3,0,Description,0.0611246618106139,0,"I started going through an elimination process starting from the first image and gradually clicking right and back testing it until it locked in place.
+
+Went toward the right direction but always stopped a step short of where I should have. There was always one number off at the end.  "
+360,3,0,Description,0.05125,0,I just clicked from right to left.
+304,3,0,Description,0.0421606648199446,9,"I worked from the right to the left. It appears the game is not working so I guess not strategy works. Even when there are no more possible moves, it still shows up as being incorrect."
+318,3,0,Description,0.0,0,I tried to make the comparisons as I saw fit.
+321,3,0,Description,0.0,0,"Make sure you always start from the center and work your way either left or right and then alternate which side you want to use going from one side to the other and making sure you don't miss one
+
+"
+351,3,0,Description,0.0,0,I did not follow any strategies to complete this task.
+399,3,0,Description,0.0,0,im terrible at this and don't understand it completely.
+415,3,0,Description,0.0,0,its is very difficult task but just think once after understand to proceed the task
+416,3,0,Description,0.0,0,Selec the last left with with the last right  and see if they flip
+421,3,0,Description,0.0,0,I cannot give advice on any strategy that I used because my strategy did not work 
+444,3,0,Description,0.0,0,"I clicked on the second image to see it moved left. If it did not, I moved to the third image and so on."
+288,1,0,Demonstration,0.915124238620742,9,"I tried to work backwards and use positionality (or the end) to help with my determining. So basically work from the 6 location and see if what was there would move down. If so, then move from 5 to 4. If something moved from 4 to 5. Then check 6. This would allow me to understand if what was in the 6 location was the highest possible. If something didn't swap, then I at least new everything to the right of it was a higher number than the pair I was trying to swap."
+158,1,0,Demonstration,0.9093529189345484,1,"Start with the second tile and click to the left, follow that pattern until the final tile."
+284,1,0,Demonstration,0.8745925160697888,1,Begin by selecting the second and first image.  Regardless of whether they swap or not select the third and second image.  If they swap check the second and first image.  Continue down the line and as you move further to the right when two images swap check the one that moved left against all images to its left until it stops changing positions.
+206,1,0,Demonstration,0.8702745450797398,1,Start by clicking the second picture from the left. Then click the picture to it's left (first picture) keep going to the picture to the right and clicking the one before it until non of the pictures move anymore. 
+164,1,0,Demonstration,0.8546929216859287,1,"Compare 2 and 1. Then compare 3 and 2. If 3 and 2 swap, then compare 2 and 1. Continue with 4, then 5, then 6, and whenever two images do not swap, move to the next image.
+
+"
+240,1,0,Demonstration,0.8484005182173681,1,"You work your left to right. Let's say the leftmost one is A, the one to its right is B and on over to F. Click on A and B and they'll arrange themselves. Then lick on B and C. If they switch and C moved to B, the check the new B against A.
+Then We check C and D. IF they move, check the new C and B; if they move again, check the new B and A.
+With E and F, do the same process, seeing if they're smaller than the one to the left and keep ""sliding"" it left until it doesn't move."
+182,1,0,Demonstration,0.8481719701100321,1,"try switching the second picture with the first. Then switch the third picture with the second. if they don't move, move onto the 4th picture. If they do move, then try switching the 2 with the 1 picture. Continue the pattern."
+228,1,0,Demonstration,0.8380170722828065,1,"First, click the first two options. Then, click options two and three. If the third option overtakes options two, then compare the new second option with the first option. Next, compare options three and four, again if option four replaces three go down the list until it does not replace one of the options. You will continue doing this until you finish comparing each option. "
+219,1,0,Demonstration,0.8300091827364555,1,I compared the second image to the first and then kept working my way right and comparing each one to the one in front of it until it did not change. By doing this you are guaranteeing that you will get them in the right order.
+229,1,0,Demonstration,0.8285386142329199,1,"I started with the leftmost pairs and see if they swapped. If they didn't, I moved on to the next pair to the right. If there was a swap, I kept swapping the current pick with the one to the left of it."
+290,1,0,Demonstration,0.8106151213643722,1,"I started with the 2nd to left image and tried to swap the 2nd and 1st image. If they didn't swap, I moved on to trying to swap the 3rd and 2nd image. If they didn't swap, I moved on to the 4th and 3rd image. If they didn't swap, I moved on to the 5th and 4th image. If any of these images did swap, I kept selecting the rightmost image that moved to the left and selected the image to the left of it."
+279,1,0,Demonstration,0.8015245450797398,1,"Starting from the left, compare the firstt and second images. Then compare the third and second, then that same image with the first. Keep repeating this cycle moving toward the right and moving images one by one left as far as they can go."
+262,1,0,Demonstration,0.7927823691460055,1,"Starting with the 2 pictures on the left, click the trailing one and then the one to the left. If the second picture advances then click on the third picture and the one to the left. Keep checking the trailing picture to the last one chosen. Move each picture as far to the left as it will go. It is possible that the last picture on the right will have to move 5 spaces to the left to be first in line. When the last picture won't move any more you are done."
+183,1,0,Demonstration,0.7796883303177009,1,"I started with the second picture and tried to swap it with the first. Then, I clicked on the third picture and tried to swap it with the second, going down the row doing the same thing until I compared every picture with the one to the left of it. It worked pretty well, you just have to remember which pictures you have already clicked on to limit the number of tries."
+263,1,0,Demonstration,0.7719013698034678,1,"Compare the first two tiles on the left. If they shift, compare the new tile 2 and 3. If they also shift, compare the new 1 and 2 again. If they do not shift, move to the left. Keep working to the right, shifting new tiles to the left as possible, then picking up where you left off. "
+256,1,0,Demonstration,0.7694948275168056,1,"Work from left to right.
+
+Compare 1 and 2.
+Then compare 2 and 3. If 2 and 3 swap then compare 1 and the new 2.
+Then compare 3 and 4. If 3 and 4 swap then compare 2 and the new 3. If 2 and 3 swap then compare 1 and the new 2.
+
+Repeat the process until you've reached the end and there are no more changes."
+212,1,0,Demonstration,0.75567520280807,9,I used the strategy of the first guy I watched because he had the highest bonus and his strategy was clear. You start at the right end compare the ones side by side and make your way down the line. Minimize your comparisons just go straight down the line.
+178,1,0,Demonstration,0.7513908210923307,1,"move the pictures from right to left in sequence.  For example, click on the second pic and then the first.  whether or not they switch,  go to the third picture and move them from right to left again moving towards the beginning until the pics don't switch.  Continue in that fashion until there isn't a switch.  you should be in order."
+270,1,0,Demonstration,0.7497987948337598,1,I moved the first image around until it wouldn't move and then worked back from there to see which others had to move.
+233,1,0,Demonstration,0.7466019938547411,1,"Initially I was memorizing which pieces I have compared and move forward based on whether it switched or not. Then I was shown examples of moving down the line one tile at a time checking to see if it can be switched, which seemed to work without fail so I continued thusly."
+190,1,0,Demonstration,0.745050383072361,1,"Start with the second image and compare to the first image.  If the images swap, or they don't swap, then move to the third image.  Select the third and the second images.  If the images swap, then compare the image that is now second to the first image.  If nothing, then move on to the forth image.  Next move to the fourth image and select it and the third image, if they swap, now selectt the same image and the second image, if they swap, select it and the first.  Once the image stops swapping move to the fifth image and select the fourth.  If it swaps, select it and the third and keep selecting until it stops swapping.  Do the same procedure for the sixth and last image, selecting it and the next in front of it until the images stop swapping positions.  Once you complete with the last image, you are done and should select the finish button."
+253,1,0,Demonstration,0.7364268565267567,1,"I start at 2nd item from the left and then compare that item to the adjacent item to the left. After that, I move one more item to the right, and start the process over. I keep comparing items to the left, until there is no more movement. Then I move to the next item on the right and so on. I do this until I reach the last item in the list. "
+199,1,0,Demonstration,0.73149612070691,1,I started at the second picture and compared to the one or ones in front of it and moved along the row comparing each to the ones before it. I tried to keep track of which image I chose and make sure that I checked it back to the beginning. 
+285,1,0,Demonstration,0.7261967447581833,1,Click the picture next to number one and then each pictture after that until they would not move forward anymore
+204,1,0,Demonstration,0.7194490358126723,1,I compared the image from left to right one after the other.
+169,1,0,Demonstration,0.7183837164056944,1,"The strategy I used is the following:
+1. Click on the first and second images.
+2. Click on the second and third images. If the second and third images swap order, then click on the current first and second images to see if they will swap.
+3. Click on the third and fourth images. If nothing happens go on to step 4. If the images swapped order then click on second and third images. If nothing happens go on to step 4. If the images swapped order then click on the first and second images.
+4. Click on the fourth and fifth images. If nothing happens go on to step 5. If the images swapped order, then click on the third and fourth images. If nothing happens go on to step 5. If the images swap order, click on the second and third images. If nothing happens go on to step 5. If the images swap order click on the first and second images.
+5. Click on the fifth and sixth images. If nothing happens click the Finished button. If the images swap order click on the fourth and fifth images. If nothing happens click Finished. If the images swap order click on the third and fourth images. If nothing happens click Finished. If the images swap order click on the second and third images. If nothing happens click Finished. If the images swap order click on the first and second images. Click Finished to submit your trial."
+203,1,0,Demonstration,0.70537359202569,1,I used the way that a previous participant used. I started with the tile to the far left and then moved it over twice. Then the second tile gets moved left one. Start with the original tile and move once more right. Then move the one to the left once more to the left until it stops moving. Contiune this process. 
+224,1,0,Demonstration,0.6868865978344,1,I started with 1 and 2 and then 2 and 3 and just worked my way down the line without jumping around.
+184,1,0,Demonstration,0.6780431401210623,1,I used the other worker strategy then i used mine with selecting the last one first then move to the one next to it.
+210,1,0,Demonstration,0.6750856336470721,1,"I clicked on the first two squares to see if they needed to reverse. If not then I clicked on square 3 and square 2. If they swapped I checked again for square 1 and 2. If they did not swap I went on to square 4. If they swapped I took square 3 and attempted to move that to 2 and if it worked then to 1. If not I went to the 5th square and changed it with the 6th. If it swapped I attempted to move the new picture in the 5th square down the line from 4, 3, 2, 1 or as far as it went."
+241,1,0,Demonstration,0.6717807246865689,1,I clicked a picture and tried to move it until it got to the right position and then I clicked a photo the was further down until it was in the right position. I continued that until every photo was in the correct place
+255,1,0,Demonstration,0.6662353497318533,1,"You test from left to right start from 2 to 1, if it moves then you test 3 to 2, if they swap, then test 3 to 1. Continue this line of testing up to the right most image and it should quickly put the images in the correct order."
+222,1,0,Demonstration,0.6552060737729235,7,"I started with first position and kept moving images forward until none would switch, The double checked each that moved backwards the same way."
+274,1,0,Demonstration,0.6403665608327614,1,"I just followed a strategy I saw where I clicked on the second picture and then the picture to the left. I would go down from left to right click on pictures and then one to the left, repeating the process on any picture that moves until the picture stops moving to the left. "
+193,1,0,Demonstration,0.63567520280807,9,"Move back back to front and find one that moves, then test the ones behind it against the one that moved back.  Repeat this until everything is in place."
+234,1,0,Demonstration,0.6314961207069099,1,"I started at the first two images and compared, then worked my way from left to right comparing and moving until none moved. It worked ok, not the highest bonus but it worked."
+249,1,0,Demonstration,0.6311921533899556,1,I took the challenge one step at a time. By swapping the first two until i reached the final fifth one
+150,1,0,Demonstration,0.6266666666666667,1,"I tried to use the strategy of someone else, that is starting with the second image, and moving to the left, then the third image, moving to the left, fourth, and so on... it worked okay, it gets the job done but it may not be the most successful strategy.  "
+221,1,0,Demonstration,0.6228020930118833,1,"I would start at the 2 then select 1. I would then proceed to 3, then 2. If it swapped, I would then select 2, then 1. I would keep this strategy along until the end working from right to left. If there was no swap I would not feel a need to proceed that tile and simply move onto the next number. If it moves I would move it left until it wouldn't move anymore.
+
+For example I would use this order: 2, 1...3, 2....2, 1.....4, 3....3, 2....2, 1....5, 4...4, 3...6, 5...5, 4...4, 3...3, 2...2, 1...
+"
+154,1,0,Demonstration,0.6183837164056945,1,I tried to improve upon the most lucrative strategy I saw earlier. When I felt I couldn't I strictly followed it. At the end I tried a similar strategy to see if it was an improvement. Overall this strategy worked well.
+226,1,0,Demonstration,0.6159598067877289,1,"I compared the images sequentially from the second image to the sixth, swapping the image with the images to their left until each of them couldn't be swapped anymore. I believe this is the fastest way to get the correct order. "
+163,1,0,Demonstration,0.6135079550264366,1,"I took each image going forward and saw if it could be moved down the line, if it couldn't I moved on to the next image and replicated it going all the way down the line.  When no more could be moved I assumed it was good."
+223,1,0,Demonstration,0.6084121407785245,1,"i picked the second image and moved it to the first, then the third image moved to the second, if it moved then I would move it to the first.  If it didn't move I would then move on to the fourth image and try it in the third spot.  If it moved then I would try it to the third spot and so on until it did not move any more. If it did not move to the fourth spot, I would move on to the fifth image."
+167,1,0,Demonstration,0.6081333651363621,1,Compare first picture with 2nd. If they don't switch then they are in order so you compare 2nd to 3rd. If it switches then you compare the new 2nd with 1st. Now take 3rd picture and compare to 4th. You keep doing this all the way down. In this process if a picture switches then you take the newly switched and compare to the one above and keep doing that until there is no switch and then go back to the original switched position and keep working down to the end.
+254,1,0,Demonstration,0.6062265017009882,1,"I started with the first image and compared it to the second image.  If the images did not switch, I went on to compare the second and third image.  When the image switched, I went backward comparing the images from before to the one I was on.  "
+299,1,0,Demonstration,0.6003850095957988,7,"I began from the first picture choosing it then if it switched I went to the next, after I switched them all in order I double checked to make sure the middle ones didn't need to be switched"
+189,1,0,Demonstration,0.57844838921762,0,I tried using the strategy that I saw from a previous player. I tried moving them all over and to the side. I usually started with the second one.
+227,1,0,Demonstration,0.5722314049586776,7,"What I did was relatively simple. I started at the left side, or the number 1 position. I would then try to switch positions 1 and 2. I would then move onto try and switch positions 2 and 3. After that positions 3 and 4. Then 4 and 5. Lastly I would switch positions 5 and 6. I would then work backwards from right to left, but instead of starting at position 6 I would start at position 5. I would compare positions 5 and 4, 4 and 3, 3 and 2, 2 and 1. After checking all of this I felt somewhat confident the order was correct and would submit."
+214,1,0,Demonstration,0.561201336126411,1,"I used the same strategy as the one with 1.01 bonus; I clicked : 2,1, 3, 2, 2, 1, 4, 3, 3, 2, 2, 1, 5, 4, 4, 3, (moved on if nothing moved), 6, 5, 5, 4, then finished if nothing moved."
+156,1,0,Demonstration,0.55125,2,"First click the first image, then click the remaining images one by one."
+217,1,0,Demonstration,0.5427449120143926,2,"I just started from the first box, and then went to the right, choosing each box along the way in comparison. When I figure d out the first space, I moved on to the second space, all the way to the end. If you do this, you will have a consistent 15 move score. "
+235,1,0,Demonstration,0.5248486956766177,0,"It tried to work in an order from first to last. By the end I would try to switch the first and las, second and fifth, and third and fourth."
+275,1,0,Demonstration,0.5084969698010822,1,"I click the first picture then compare it the with second one, the do the same with the third and second, then compare third to forth till the last picture."
+194,1,0,Demonstration,0.5063626160595858,7,Start with the first picture and move to the next. Keep selecting until you can no longer swap with the picture next to the one you are trying to swap.
+243,1,0,Demonstration,0.5044325192530765,14,"My strategy was quite random. I began at the left, comparing the first two, then clicking through the next in line against those that I had selected. It was as much about simply progressing through the activity and ultimately getting the answer correct as focusing on minimizing number of clicks."
+257,1,0,Demonstration,0.4983228501022817,1,I started with the first then went down the row until it stopped then doubled backed and finished the order of the left side. Then I went back to the right side and did the same until the last one was found.
+272,1,0,Demonstration,0.4877299067775259,1,I did my best to follow what the person who earned the highest did but to be honest I forgot because I looked at what the next highest person did and got mixed up. By the end I did have a strategy but I wasnt really paying attention to it enough to be able to describe it. 
+280,1,0,Demonstration,0.4876943195743397,1,truely answer
+195,1,0,Demonstration,0.4814226041150009,1,My strategy was to pick the two tiles next to each other and see if they swapped. Then I moved down the line to see if the ones next to each other swapped and kept track of their positions.
+232,1,0,Demonstration,0.4810544123431236,7,"Start with the first picture and compare it in order with each adjacent picture. Once the first picture doesn't swap, go to the second picture and repeat the process. Once the images don't move going left to right, if you are confident you can stop there. To double check your work you can check them from right to left applying the same method."
+155,1,0,Demonstration,0.4767468066818326,1,Compare the right to the left until all items are complete
+251,1,0,Demonstration,0.4747314049586776,0,"My strategy worked pretty well. I got 5 out of 8 correct, and the three I got incorrect was mostly owed to the fact that I kept forgetting to do one final check of the third square from the left. To begin, I started by selecting the square on the far left, then selecting the square on the far right to see if they would switch. They usually did not. I then selected the square on the far right and the square to its left. I then started testing the far left squares against all the squares ahead of until I got a switch. I then would check the square that switched with the ones behind it to the left and ahead of it. It was a sort of weaving technique. This is probably not the best way to go about this, but I did get okay results."
+278,1,0,Demonstration,0.4736156516012716,1,i just started at beginnig and work through til the end
+216,1,0,Demonstration,0.4713609467455621,9,"I just chose to use the strategy of the person who earned the highest bonus. It didn't always work, but it was good enough for me so that I didn't have to spend too much time thinking about another strategy."
+170,1,0,Demonstration,0.466811634364082,0,I started with the picture farthest left and clicked through to see how far to the right it would move. I then reiterated this process until none of the cards would move. I was successful but I think it could have been done in fewer moves.
+207,1,0,Demonstration,0.4511400554157797,0,"I started with the rightmost piece and compared it with the one on the immediate left, then the next one, etc. The I started with the new rightmost piece and tried to keep track of which pieces it was higher than. (""I know that A is higher than C and B is lower than C, so no need to directly compare A and C."")"
+297,1,0,Demonstration,0.4453486177680984,1,"1) select the 3d box to start
+2) click the 2d box to see if they swap
+3) if yes, select the 2d box and click the 1st box to see if they swap
+4) if yes, select the 4th box and click on the 3d box for swapping
+5) if yes, select the 5th box  and click on the 4th box for swapping
+6) if yes, select the 6th box and click on the 5th box, if swap, you know this is the #6 so leave it there
+7) select 5th box and click on the 4th box, if not swapping then this is #5
+8) select the 4th box and click on the 3d box, if not swapping this is #4
+9) select the 3d box and click on the 2d box, if not swapping this is #3
+10) stop and click the next button"
+171,1,0,Demonstration,0.4400810422788444,12,I would start on the far right and move that image with the image to its immediate left until it stopped.  I would then go back to the last image I passed and move that to the right until it stopped.  I would repeat this process until all were in order
+198,1,0,Demonstration,0.4368805579012392,0,I tried to go from the left to the right. Then I go to the second from the left and try to do from that to the right again. 
+173,1,0,Demonstration,0.4272309806275451,6,My strategy was to compare each image from the left side with a further image from the right side. Sometimes I would forget to compare an image but when all images were compared correctly this strategy seems to work well.
+237,1,0,Demonstration,0.4255946642537639,1,"You may try right side to left side one by one slide , This is the best way to complete the task easily. "
+209,1,0,Demonstration,0.4000810422788444,0,"I tried to move them to the end first if they didn't belong in front, and then I just checked them in order from there."
+289,1,0,Demonstration,0.3999749682752737,12,i started at the far left and tried to see how far to the right i could get it to go by matching them. 
+294,1,0,Demonstration,0.39825573340056,0,"Start with the first element, make a comparison between that element and the next; if that doesn't work, make a comparison between the first and the third; so on until you get one swap. If what was first is now second or third, continue to swap successively rightwards. If what was first is now fourth, fifth, or sixth; swap successively leftwards. 
+
+After you have swapped once with the first ordinal picture and the last picture, or you've tried the five swaps with the first picture and made no movements and have tried five swaps with the last picture and made no movements, you know the first and last picture are in their right place. Try the algorithm again with the second through the fifth, then the third through the fourth. 
+
+This is known as DUMBSORT, and it didn't work too well as I had too many comparisons. Here's a better idea.
+
+Given a group (a, b, c, d, e, f), try (a, f), (b, e), (c, d). Then (a, c), (b, c), (c, e). Then (d, e), (d, f). "
+162,1,0,Demonstration,0.3963458142479121,1,I just follow the instruction to finish the task.
+244,1,0,Demonstration,0.3960844748011359,1,moved from left to write. if piece didnt move left i moved to the next piece.
+172,1,0,Demonstration,0.3943897472423114,1,FIRST I SELECT THE SECOND IMAGE AND SWAP TO THE FIRST IMAGE. THEN SELECT THIRD IMAGE SWAP TO SECOND IMAGE. THEN AGAIN SELECT SECOND IMAGE SWAP TO FIRST IMAGE. REPEAT THE PROCESS TO THE END. IF ANY IMAGE CAN'T MOVE THEN DECIDE THAT WAS THE PLACE OF THAT IMAGE. THIS IS MY STRATEGY.
+252,1,0,Demonstration,0.3936914125856685,0,I think just work from the outside and work your way in. It's probably the easiest way.
+208,1,0,Demonstration,0.3908299490214871,1,Check for the second option if it changes you click the previous image if it didn't change go for next image
+166,1,0,Demonstration,0.3849382716049382,0,I attempted to go from left to right selecting the set image and then going down the list until it did not move.
+220,1,0,Demonstration,0.3825239866192526,9,I started at the beginning or end and just switched them until I couldn't one at a time.
+283,1,0,Demonstration,0.3739108675427204,6,I started from the first picture and clicked on the last picture until the picture stopped moving. Then I repeated the same strategy with the second picture and then on until the pictures stopped moving.
+200,1,0,Demonstration,0.3646017109551743,0,My strategy was to make sure all of them couldn't move around anymore. So if the first one wouldn't move I would leave it there and move to the next one until none of them moved anymore.
+153,1,0,Demonstration,0.3622048590262267,1,"start on the left and try to see what the first one will be by moving each one to see if it goes first, once you get the first one in place check each one by clicking the one immediately to the left to see if it swaps, as they quit swapping move to the next selection on the right til all are in place "
+176,1,0,Demonstration,0.3613797216222342,6,I started with the first and the last and worked backwards. Most times I double checked once I thought I was done.
+202,1,0,Demonstration,0.3510464382991854,1,"Start with the second one.  If it changes, click again.  Then the first.  If it changes, click again. Click 3.  If it changes, click again. click 2  If it changes, click again. click 1.  If it changes, click again. Click 4. If it changes, click again. 3.  If it changes, click again. 2.  If it changes, click again. 1.  If it changes, click again. Click 5. If it changes, click again. 4. If it changes, click again. 3. If it changes, click again. 2. If it changes, click again. 1. If it changes, click again. Click 6.  If it changes, click again. 5. If it changes, click again. 4. If it changes, click again. 3. If it changes, click again. 2. If it changes, click again. 1. If it changes, click again. "
+186,1,0,Demonstration,0.3506411892026277,0,I moved them right until I couldn't any more.
+236,1,0,Demonstration,0.3496022568255783,1,I just doing based on instruction and make my own decision. i understand finally how to swap images.
+218,1,0,Demonstration,0.3451544919804384,0,"Match every item you can between every other item in sequence.  It might not solve it quickest, but a slow solve is better than no solution at all."
+273,1,0,Demonstration,0.3418670280815026,3,"I tried to be methodical and logical about it, but it was so easy to lose track of what I'd already tried and that added additional clicks. I think if I'd been keeping better track, it would have helped me. I think in every trial I went from left to right. I ended up basically doing what the highest paid player did, but not nearly as successfully. Just take your time and pay attention, and work methodically."
+215,1,0,Demonstration,0.3411489891234368,1,I clicked on the pictures in order until they stopped switching.  I don't think it worked very well.
+267,1,0,Demonstration,0.3383223746829532,10,"I learned some strategy from the learning phase. I just compared one  image with the other image one after the other . First I started  from the first image to last image one after the other, then from the backwards."
+225,1,0,Demonstration,0.338140589569161,0,I start on the left and click the first one and then the one to the left. I go down the row like that. When I get done with those I randomly click on some in the middle to see if they switch. If they don't I click finished. In the beginning this worked well for me but when I tried mixing it up and trying something different it didn't work as well. If you get a few right don't change your strategy like I did.
+264,1,0,Demonstration,0.33722681359045,0,I tried to use the algorithms I was shown by other players. But I forgot the system after about 3-4 sets. I resorted to random clicking. 
+271,1,0,Demonstration,0.3287667509336065,0,I tried to make sure I compared each picture with the remaining ones.  Hard to do when they jump around.
+179,1,0,Demonstration,0.3186953027978669,1,"I wouldn't recommend my strategy.  I tried to guess sometimes, other times I went with one of the people before me did.  I would love to do this again."
+196,1,0,Demonstration,0.3182365345713274,0,I was just going from right to left mostly
+180,1,0,Demonstration,0.3159276357601864,0,"I clicked on the first image every time, and compared it to all other images until I found the correct spot for it. I then went down the line and did the same with all images. This did not work as well as I would have liked."
+181,1,0,Demonstration,0.3140749157514586,0,I would suggest attempting to move each tile. You will eventually see a pattern. Follow the pattern. 
+157,1,0,Demonstration,0.3102106651411513,0,I just tried to go through one by one. 
+197,1,0,Demonstration,0.3053418132539011,1,"I used the strategy of another participant that earned $1.05, but I failed some rounds. I think I need to practice more."
+247,1,0,Demonstration,0.3052197224495759,0,"I started from the very left and compared it to each one on the right consecutively. If they switched, I then would used the switched picture and did the same. I worked my way from left to right in this order in a process of elimination. This was not efficient and apparently not a very successful strategy."
+259,1,0,Demonstration,0.2974807194034504,0,I started from left to right and tried pairs in one at a time.  Resetting as a piece fell into place.
+295,1,0,Demonstration,0.2932717759310557,2,If one image moved towards the front of another I would move to the next image that I hadnt moved. I tried to do this in sequence from left to right
+296,1,0,Demonstration,0.2915285294343312,2,Follow instructions
+230,1,0,Demonstration,0.2906586522502108,0,I dont understand this and I have no clue. Sorry.
+187,1,0,Demonstration,0.2858329195172657,15,It seems that there was a pattern where I need to go from right to left and try two images next to each other every time. Then I make sure that the switches are correct by doing it again.
+161,1,0,Demonstration,0.2722314049586777,0,I went from left to right and made adjustments if the images were reordered.
+175,1,0,Demonstration,0.2686819956513145,0,"Just by clicking on the image we notice which image will replace the postion ,and arrange them in order as per the task"
+192,1,0,Demonstration,0.2660761194973857,2,I just compared each and every pair to make it correct as possible. sometimes i missed it
+250,1,0,Demonstration,0.2583576862697742,0,I have no idea what I am doing so no strategy.
+258,1,0,Demonstration,0.2491133217993079,10,I tried to start from the end and put the last one in position first and work my way back to the top 
+168,1,0,Demonstration,0.2439690448808615,0,from left to right left most then compare to 2nd most left then 3rd and so on.
+231,1,0,Demonstration,0.2424875845655066,0,I tried to find the number one position and the number six position and then fill in from there.  It didn't always work because I would lose track of what pictures I had checked. 
+246,1,0,Demonstration,0.2354627560745718,10,I started from the last item and worked my way back.
+177,1,0,Demonstration,0.2270467498376626,0,"I started from the first image on the left, then I went down the line to the others.  After ruling out the first image sequence, I would start from the second image and do the same until I am finished."
+174,1,0,Demonstration,0.2156823855049618,0,I performed with my own ideas and thoughts of alignment of order.
+165,1,0,Demonstration,0.2030514478258366,0,I tried to get left to right and eliminate the ones that were first - second concurrently all the way to 6
+248,1,0,Demonstration,0.1929212580348944,7,"I tried to click on each picture, and if it didn't move, then I went to the next. In order also in reverse. "
+286,1,0,Demonstration,0.1861157024793388,0,It work perfectly.
+266,1,0,Demonstration,0.1807899686931436,0,Checking every image with every other image whether it is interchangable.
+291,1,0,Demonstration,0.1728205497885428,0,I tried to group the items as pairs and complete as such. 
+242,1,0,Demonstration,0.1719274376417233,2,Honestly I did not have much of a strategy. I thought I would develop one as it went along but I did not.
+152,1,0,Demonstration,0.1653785928029014,0,Compare first image in row with every image then find which comes first in order then find the other with same
+245,1,0,Demonstration,0.1652183409489359,0,"I tried to work from left to right the whole way down the line with one picture comparing it against another until I had gone through all the pictures.  It worked ok, but I sometimes got mixed up where I was in the chain and that's when I missed some"
+238,1,0,Demonstration,0.1608163265306122,0,I just randomly clicked until it said finished. I simply hated this 
+268,1,0,Demonstration,0.1511111111111111,0,It's very interesting and easy 
+269,1,0,Demonstration,0.1469320290099511,0,i using some strategy..
+188,1,0,Demonstration,0.1337973633789928,0,"I tried following the one that I saw but I think I messed up, forgot to compare some that I should have. I think it is better to do more comparisons for a lower bonus than to risk getting an incorrect."
+298,1,0,Demonstration,0.1310620732224837,0,"I had trouble figuring it out, so I randomly clicked on the pictures."
+205,1,0,Demonstration,0.1281536046371211,0,I tried to observe which ones moved. If they moved I tried to move the image to the optimal spot. 
+201,1,0,Demonstration,0.1,0,I looked at all the objects and their materials and tried to pair them together. I also looked at the scenery if the pictures were outdoors. Some items were related to comfort and tried to place those together. 
+239,1,0,Demonstration,0.1,0,Since I only got one bonus round correct< I'm not sure if I can recreate what I did. I thinkI changed out each end then worked my way in to the center. then I changed a couple more in the center.
+277,1,0,Demonstration,0.1,0,We have to choose according to the given image
+185,1,0,Demonstration,0.0955555555555555,0,"I tried to double check everything, although I missed a few."
+287,1,0,Demonstration,0.0947052154195011,6,Whatever image that goes first try to click the last image against it to see if it swaps from back to front.
+260,1,0,Demonstration,0.0755555555555555,0,I don't have any idea how the game worked. I thought that NOT being able to change pictures means that I had the pictures in the right order. Please don't take my advice. I completely sucked at this game. I only got 1 right out of the 9. That's only 11%.
+211,1,0,Demonstration,0.0673372781065088,0,I started of the 2 one on the right and tried moving forward until none would move. It didn't work well and I do not recommend using this strategy. 
+276,1,0,Demonstration,0.0608163265306122,0,IMAGES DISPLAY IN GREEN SIGNAL CHOOSE THAT
+282,1,0,Demonstration,0.0608163265306122,0,I tried to moved the pics from front to back.
+213,1,0,Demonstration,0.0476816608996539,0,I tried to line up pictures as they related to nature or material things.
+261,1,0,Demonstration,0.0309739368998628,0,I didn't have any strategy. I just kept clicking.
+151,1,0,Demonstration,0.0,0,Okay I have expected bonus
+159,1,0,Demonstration,0.0,0,careful observation 
+160,1,0,Demonstration,0.0,0,I tried to put them in order based on if they were similar to each other and if they had something in common with each other.
+191,1,0,Demonstration,0.0,0,Trying to make a guess on each picture and clicking each picture trying to move it into place
+265,1,0,Demonstration,0.0,0,I guess I don't understand what I'm supposed to do. I tried clicking on similar pics and that didn't seem to work.
+281,1,0,Demonstration,0.0,0,My strategy was comparing the pictures that looked the closest in comparison.
+292,1,0,Demonstration,0.0,0,it have some difficult to find the numbers. but just try random selection will be help to correct place. 
+293,1,0,Demonstration,0.0,0,it was impossible to get a correct trial
