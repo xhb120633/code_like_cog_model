@@ -27,7 +27,7 @@ from sklearn.metrics import confusion_matrix
 nltk.download('punkt')
 nltk.download('wordnet')
 
-openai.api_key = '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'
+openai.api_key = 'XXX' #Your Own API Key
 
 dir_name= 'C:/Users/51027/Documents/GitHub/sorting_algorithm_text_analysis/data'
 
