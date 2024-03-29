@@ -33,7 +33,8 @@ All permutation results are kept with full samples. Please be aware that to repl
 
 
 
-# Below is the Readme content from the original paper about the raw data strcture. Sources from [Thompson et.al., 2022](https://www.science.org/doi/10.1126/science.abn0915)
+## Below is the Readme content from the original paper about the raw data strcture. Sources from [Thompson et.al., 2022](https://www.science.org/doi/10.1126/science.abn0915)
+
 ## Experiment codebase
 The codebase we used to conduct the experiment is included in the `experiment/` directory. This codebase relies on [Dallinger](https://github.com/Dallinger/Dallinger).
 
