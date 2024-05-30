@@ -220,6 +220,42 @@ def execute_simulations_for_participant(participant_id, codes_data):
     
     codes_data[participant_id] = participant_info
 
+def execute_standard_simmulation_for_participant(participant_id, standard_codes_data,standard_algorithms):
+    """
+    Executes simulations for all trials of a specific participant, using the extracted sorting function.
+    Updates each trial with the simulated behavior sequence and also runs comprehensive simulations
+    for all permutations of a 6-length sequence.
+
+    Parameters:
+    - participant_id: The ID of the participant.
+    - participant_data: Dictionary containing all participants' data, including codes and trial info.
+    """
+    participant_info = standard_codes_data.get(participant_id)
+    print(f"Simulating participant {participant_id}")
+    if not participant_info:
+        print(f"No data found for participant {participant_id}")
+        return
+    
+    for algorithm in standard_algorithms.keys():
+        code_str = standard_algorithms[algorithm].get('generated_code', '')
+        sort_function = clean_get_function(code_str)
+        
+        # Iterate over trials and execute the sorting function with trial-specific inputs
+        for trial_id, trial_info in participant_info.get('real_task_simulation', {}).get('trials', {}).items():
+            initial_stimuli = trial_info['initial_stimuli']
+            true_order = trial_info['true_order']
+            
+            # Execute the sorting function and capture the action sequence
+            try:
+                action_sequence = sort_function(initial_stimuli, true_order)
+                
+                # Create the 'standard_simulation' key if it doesn't exist and assign the action_sequence
+                trial_info.setdefault('standard_simulation', {}).update({algorithm: {'simulated_behavior': action_sequence}})
+            except Exception as e:
+                print(f"Error during simulation for participant {participant_id}, trial {trial_id}: {e}")
+    
+     
+    
 def automantic_codes_correction(text_description, original_codes, errors):
 
     fixed_instruction = """
@@ -384,3 +420,14 @@ for participant_id, info in codes_data.items():
 save_file_path = 'F:/sorting_algorithm_data/generated_codes_simulation_data.pkl'
 save_data_to_pickle(save_file_path, codes_data)
 
+
+#execting standard algorithm simulation
+save_file_path = 'F:/sorting_algorithm_data/standard_algorithms_simulation.pkl'
+standard_sorting_algorithms = load_data_from_pickle(save_file_path)
+
+standard_codes_data = codes_data.copy()
+for participant_id, info in standard_codes_data.items():
+     execute_standard_simmulation_for_participant(participant_id, standard_codes_data, standard_sorting_algorithms)
+     
+save_file_path = 'F:/sorting_algorithm_data/standard_simulation_data.pkl'
+save_data_to_pickle(save_file_path, standard_codes_data)

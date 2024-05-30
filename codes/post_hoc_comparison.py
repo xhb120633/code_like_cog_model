@@ -14,6 +14,7 @@ import pickle
 from sklearn.utils import shuffle
 import random
 import seaborn as sns
+import matplotlib.colors as mcolors
 
 def compute_accuracy(codes_data):
     """
@@ -52,6 +53,53 @@ def compute_accuracy(codes_data):
             match_count = sum(1 for sim, true in zip(simulated_comparisons, true_comparisons) if sim == true)
             accuracy = match_count / len(true_comparisons) if true_comparisons else 0
             participant_accuracy[trial_id] = accuracy
+
+        accuracy_results[participant_id] = participant_accuracy
+
+    return accuracy_results
+
+def compute_standard_accuracy(standard_codes_data):
+    """
+    Computes accuracies of simulated behaviors against true behaviors for each trial of each participant,
+    focusing on the sequence of comparisons and padding simulated_behavior if shorter than true_behavior.
+
+    Parameters:
+    - codes_data: Dictionary containing all participants' data, including both simulated and true behaviors.
+
+    Returns:
+    - A dictionary with accuracies for each participant and trial, based on padded comparison sequences.
+    """
+    accuracy_results = {}
+
+    for participant_id, participant_info in standard_codes_data.items():
+        if participant_info.get('generated_code') is None:
+            continue
+
+        participant_accuracy = {}
+        trials_info = participant_info.get('real_task_simulation', {}).get('trials', {})
+
+        for trial_id, trial_info in trials_info.items():
+            
+            true_behavior = trial_info.get('true_behavior', [])
+            algorithm_accuracy = {}
+            for algorithm, algorithm_info in trial_info['standard_simulation'].items():
+                simulated_behavior = algorithm_info.get('simulated_behavior', [])
+                
+                # Correctly extract comparison sequences from both simulated and true behaviors
+                simulated_comparisons = [action[0] for action in simulated_behavior if isinstance(action[0], tuple)]
+                true_comparisons = [action[0] for action in true_behavior if isinstance(action[0], tuple)]
+    
+    
+                # Pad simulated_comparisons if it's shorter than true_comparisons
+                if len(simulated_comparisons) < len(true_comparisons):
+                    simulated_comparisons += [None] * (len(true_comparisons) - len(simulated_comparisons))
+    
+                # Calculate the accuracy as the proportion of matching comparisons
+                match_count = sum(1 for sim, true in zip(simulated_comparisons, true_comparisons) if sim == true)
+                accuracy = match_count / len(true_comparisons) if true_comparisons else 0
+                algorithm_accuracy[algorithm] = accuracy
+                
+            participant_accuracy[trial_id] = algorithm_accuracy
 
         accuracy_results[participant_id] = participant_accuracy
 
@@ -239,12 +287,18 @@ raw_behavioral_data = pd.DataFrame(raw_behavioral_data, columns = column_names)
 raw_behavioral_data = raw_behavioral_data.loc[raw_behavioral_data['cloned'] == False]
 
 file_path = 'result/generated_codes_data.json'
+LLM_codes_data = load_data_from_json(file_path)
 
+            
 data_file_path = 'F:/sorting_algorithm_data/generated_codes_simulation_data.pkl'
 codes_data = load_data_from_pickle(data_file_path)
-       
-#compyte post-hoc accuracy
+   
+file_path = 'F:/sorting_algorithm_data/standard_simulation_data.pkl'
+standard_codes_data = load_data_from_pickle(file_path)
+#compute post-hoc accuracy
 accuracy_data = compute_accuracy(codes_data)
+standard_accuracy_data = compute_standard_accuracy(standard_codes_data)
+
 
 # inspect those data which may have problems in comparisons (check complete zero participants)
 zero_accuracy_participants = []
@@ -254,6 +308,214 @@ for participant_id, tmp_accuracies in accuracy_data.items():
         
 ##exclude practice trials
 subject_wise_accuracy = {participant: np.mean(list(trials.values())[3:]) for participant, trials in accuracy_data.items() if len(trials.values()) > 3}
+subject_wise_accuracy = dict(sorted(subject_wise_accuracy.items()))
+# Initialize a dictionary to store average accuracies
+subject_average_standard_accuracy = {}
+
+# Iterate over participants
+for participant, trials in standard_accuracy_data.items():
+    # Initialize lists to store accuracies for each algorithm
+    algorithm_accuracies = {algorithm: [] for trial in trials.values() for algorithm in trial.keys()}
+    
+    # Iterate over trials for each participant
+    for trial_id, trial in trials.items():
+        # Iterate over algorithms for each trial
+        if int(trial_id) > 2:
+            for algorithm, accuracy in trial.items():
+                algorithm_accuracies[algorithm].append(accuracy)
+    
+    # Calculate average accuracy for each algorithm for the participant
+    subject_average_standard_accuracy[participant] = {algorithm: np.mean(scores) for algorithm, scores in algorithm_accuracies.items()}
+
+subject_average_standard_accuracy= dict(sorted(subject_average_standard_accuracy.items()))
+
+
+## choosing best heuristic algroithm
+best_predicted_accuracy = {}
+
+# Iterate over participants in the average_accuracy dictionary
+for participant, accuracy_data in subject_average_standard_accuracy.items():
+    # Find the algorithm with the highest average accuracy for the participant
+    best_algorithm = max(accuracy_data, key=accuracy_data.get)
+    best_accuracy = accuracy_data[best_algorithm]
+    
+    # Store the best-predicted accuracy and algorithm for the participant
+    best_predicted_accuracy[participant] = {'best_algorithm': best_algorithm, 'best_accuracy': best_accuracy}
+
+## choosing RNN assigned algorithms
+participant_data_df = pd.DataFrame(participant_data).set_index('participant_id')
+participant_data_df.index = participant_data_df.index.astype(str)
+pre_assigned_predicted_accuracy = {}
+algorithm_list = []
+id_list = []
+for participant, accuracy_data in subject_average_standard_accuracy.items():
+    # Find the algorithm with the highest average accuracy for the participant
+    pre_assigned_algorithm = strategy_dic[int(participant_data_df.at[participant, 'algorithm'])]
+    if pre_assigned_algorithm != 'Unidentified':
+        pre_assigned_accuracy = accuracy_data[pre_assigned_algorithm]
+        # Store the best-predicted accuracy and algorithm for the participant
+        pre_assigned_predicted_accuracy[participant] = {'pre_assigned_algorithm': pre_assigned_algorithm, 'pre_assigned_accuracy': pre_assigned_accuracy}
+        algorithm_list.append(int(participant_data_df.at[participant, 'algorithm']))
+        id_list.append(participant)
+
+## choosing LLM predicted algorithm
+LLM_predicted_accuracy = {}
+LLM_algorithm_list = []
+LLM_id_list = []
+target_model = 'meta-llama/Meta-Llama-3-70B-Instruct'
+for participant, accuracy_data in LLM_codes_data.items():
+    # Find the algorithm with the highest average accuracy for the participant
+    LLM_predicted_algorithm = LLM_codes_data[participant]['algorithm_classification'][target_model]
+    if LLM_predicted_algorithm != 'Unidentified':
+        predicted_accuracy = subject_average_standard_accuracy[participant][LLM_predicted_algorithm]
+        # Store the best-predicted accuracy and algorithm for the participant
+        LLM_predicted_accuracy[participant] = {'LLM_predicted_algorithm': LLM_predicted_algorithm, 'predicted_accuracy': predicted_accuracy}
+        LLM_algorithm_list.append(int(participant_data_df.at[participant, 'algorithm']))
+        LLM_id_list.append(participant)
+
+
+# Extract x and y data for the scatter plot
+x_data = [best_predicted_accuracy[participant]['best_accuracy'] for participant, participant_info in best_predicted_accuracy.items()]
+y_data = [subject_wise_accuracy[participant] for participant, participant_info in subject_wise_accuracy.items()]
+
+# Use LLM generated codes data and RNN-attributed codes data
+x_data = [pre_assigned_predicted_accuracy[participant]['pre_assigned_accuracy'] for participant, participant_info in pre_assigned_predicted_accuracy.items()]
+y_data = [subject_wise_accuracy[participant] for participant, participant_info in subject_wise_accuracy.items() if int(participant_data_df.at[participant, 'algorithm']) != 0]
+
+# Use LLM generated codes data and LLM-attributed algorithm data
+x_data = [LLM_predicted_accuracy[participant]['predicted_accuracy'] for participant, participant_info in LLM_predicted_accuracy.items()]
+y_data = [subject_wise_accuracy[participant] for participant, participant_info in LLM_predicted_accuracy.items() if participant in LLM_id_list ]
+
+# Use rnn generated codes data and LLM-attributed algorithm data
+x_data = [LLM_predicted_accuracy[participant]['predicted_accuracy'] for participant, participant_info in codes_data.items() if participant in id_list and participant in LLM_id_list]
+y_data = [pre_assigned_predicted_accuracy[participant]['pre_assigned_accuracy'] for participant, participant_info in codes_data.items() if participant in id_list and participant in LLM_id_list]
+
+merged_algorithm_list = [int(participant_data_df.at[participant, 'algorithm'])for participant, participant_info in codes_data.items() if participant in id_list and participant in LLM_id_list]
+for index, algorithm in enumerate(merged_algorithm_list):
+    if algorithm > 8:
+        merged_algorithm_list[index] -= 8
+        
+# Plot the scatter plot
+# Define a diverging colormap
+cmap = plt.get_cmap('tab10')
+
+# Plot the scatter plot with colors based on algorithm_list
+plt.figure(figsize=(8, 6))
+sc = plt.scatter(x_data, y_data, c=merged_algorithm_list, cmap=cmap)
+
+# Add labels and title
+plt.xlabel('Predicted Accuracy by LLM Attributed Standard Codes')
+plt.ylabel('Predicted Accuracy by RNN Attributed Standard Codes')
+plt.title('Scatter Plot of Predicted Accuracy')
+
+# Add a colorbar to show the mapping of colors to algorithms
+cbar = plt.colorbar(sc, label='Algorithm')
+cbar.ax.set_yticklabels(strategy_dic[1:])  # Annotation for the colorbar
+
+
+# Add a red dashed line y=x
+plt.plot([min(x_data), max(x_data)], [min(y_data), max(y_data)], color='red', linestyle='--')
+
+# Show plot
+plt.tight_layout()
+plt.show()
+
+# Calculate the proportion of participants with higher accuracy in y_data than in x_data
+higher_accuracy_count = sum(y > x for x, y in zip(x_data, y_data))
+total_participants = len(x_data)
+proportion_higher_accuracy = higher_accuracy_count / total_participants
+
+print(f"Proportion of participants with higher accuracy in y_data than in x_data: {proportion_higher_accuracy:.2%}")
+
+perfect_id_list = np.where([y == x for x, y in zip(x_data, y_data)])
+tmp_id = str(perfect_id_list[0][24])
+print(codes_data[tmp_id]['algorithm_description'])
+print(best_predicted_accuracy[tmp_id]['best_algorithm'])
+print(codes_data[tmp_id]['generated_code'])
+print(best_predicted_accuracy[tmp_id]['best_accuracy'])
+
+biased_id_list = np.where([y-x<-0.5 for x, y in zip(x_data, y_data)])
+idx = 23
+tmp_id = str(id_list[biased_id_list[0][idx]])
+pre_assigned_algorithm = strategy_dic[int(participant_data_df.at[tmp_id, 'algorithm'])]
+tmp_trial = '12'
+print(f"True behavior: {codes_data[tmp_id]['real_task_simulation']['trials'][tmp_trial]['true_behavior']}")
+print(f"LLM prediction: {codes_data[tmp_id]['real_task_simulation']['trials'][tmp_trial]['simulated_behavior']}")
+print(f"Standard prediction: {standard_codes_data[tmp_id]['real_task_simulation']['trials'][tmp_trial]['standard_simulation'][pre_assigned_algorithm]['simulated_behavior']}")
+print(f"Description: {codes_data[tmp_id]['algorithm_description']}")
+print(f"LLM accuracy: {y_data[biased_id_list[0][idx]]}; Standard Accuracy: {x_data[biased_id_list[0][idx]]}")
+
+
+score_diff = [y - x for x, y in zip(x_data, y_data)]
+plt.hist(score_diff)
+lower_bound, upper_bound = np.percentile(score_diff, [2.5, 97.5])
+# Convert participant IDs to strings
+algorithm_labels = {str(participant_id): algorithm for participant_id, algorithm in zip(participant_data['participant_id'], participant_data['algorithm'])}
+
+# Grouping of algorithms where certain pairs are considered the same algorithm with different versions
+# Define the number of groups
+num_groups = 8  # Update this according to your actual number of groups
+
+
+# Generate the grouped_algorithms dictionary
+grouped_algorithms = {}
+for group_index in range(1,num_groups + 1):
+    algorithms_in_group = [group_index, group_index + num_groups]
+    grouped_algorithms[group_index] = algorithms_in_group
+
+algroithm_accuracy_data = {}
+
+for participant, scores in subject_wise_accuracy.items():
+    algorithm = algorithm_labels.get(participant)
+    if algorithm is not None:  # Ensure the participant has an associated algorithm
+        algroithm_accuracy_data[participant] = {'algorithm': algorithm, 'scores': scores}
+        
+# Compute mean accuracy and standard error for each algorithm in grouped_algorithms
+mean_accuracies = {}
+std_errors = {}
+
+for group_id, algorithms in grouped_algorithms.items():
+    for algorithm in algorithms:
+        relevant_scores = [data['scores'] for participant, data in algroithm_accuracy_data.items() if data['algorithm'] == algorithm]
+        mean_accuracies[(group_id, algorithm)] = np.mean(relevant_scores)
+        std_errors[(group_id, algorithm)] = np.std( relevant_scores) / np.sqrt(len(relevant_scores))
+
+# Plotting the grouped bar plot
+labels = list(range(1, len(grouped_algorithms) + 1))
+x = np.arange(len(labels))  # Label locations
+width = 0.35  # Width of the bars
+
+fig, ax = plt.subplots()
+rects1 = [ax.bar(x - width/2, [mean_accuracies.get((label, grouped_algorithms[label][0]), 0) for label in labels], width, label='Forward', yerr=[std_errors.get((label, grouped_algorithms[label][0]), 0) for label in labels])]
+rects2 = [ax.bar(x + width/2, [mean_accuracies.get((label, grouped_algorithms[label][1]), 0) for label in labels], width, label='Backward', yerr=[std_errors.get((label, grouped_algorithms[label][1]), 0) for label in labels])]
+
+# Add some text for labels, title and custom x-axis tick labels, etc.
+ax.set_xlabel('Algorithm Group')
+ax.set_ylabel('Mean Accuracy')
+ax.set_title('Accuracy by Algorithm Group and Direction')
+ax.set_xticks(x)
+ax.set_xticklabels(list(strategy_dic[i] for i in range(1, len(grouped_algorithms) + 1)))
+ax.legend()
+
+def autolabel(rects):
+    """Attach a text label above each bar in *rects*, displaying its height."""
+    for rect in rects:
+        height = rect.get_height()
+        ax.annotate('{}'.format(round(height, 2)),
+                    xy=(rect.get_x() + rect.get_width() / 2, height),
+                    xytext=(0, 3),  # 3 points vertical offset
+                    textcoords="offset points",
+                    ha='center', va='bottom')
+
+for rects in rects1:
+    autolabel(rects)
+for rects in rects2:
+    autolabel(rects)
+
+fig.tight_layout()
+plt.show()
+
+
 
 # Assuming subject_wise_accuracy is already computed and available
 # Sort participants based on their accuracies and select the top 10
@@ -340,14 +602,45 @@ print(f"Proportion of participants surpassing the 95% CI upper bound: {proportio
 participant_data_df = pd.DataFrame(participant_data).set_index('participant_id')
 participant_data_df.index = participant_data_df.index.astype(str)
 
+accuracy_data = compute_accuracy(codes_data)
+accuracy_data = dict(sorted(accuracy_data.items()))
 # Extract mean_trial_scores for participants existing in accuracy_data
 mean_trial_scores = []
-
+algorithm_list = []
 for pid in accuracy_data.keys():
-    if int(pid) in participant_data_df.index:
-        mean_trial_scores.append(participant_data_df.at[int(pid), 'mean_trial_score'])
+    if pid in participant_data_df.index:
+        mean_trial_scores.append(participant_data_df.at[pid, 'mean_trial_score'])
+        algorithm_list.append(participant_data_df.at[pid, 'algorithm'])
 
+for index, algorithm in enumerate(algorithm_list):
+    if algorithm > 8:
+        algorithm_list[index] -= 8
 
+# for index, algorithm in enumerate(algorithm_list):
+#     if algorithm > 8:
+#         algorithm_list[index] = 2
+#     elif algorithm <8 and algorithm > 0:
+#         algorithm_list[index] = 1
+        
+# Define a diverging colormap
+cmap = plt.get_cmap('tab10')
+
+# Plot the scatter plot with colors based on algorithm_list
+plt.figure(figsize=(8, 6))
+sc = plt.scatter(mean_trial_scores, score_diff, c=algorithm_list, cmap=cmap)
+
+# Add labels and title
+plt.xlabel('Task Performance')
+plt.ylabel('Relative performance between LLM and Standard Algorithms')
+plt.title('Scatter Plot of Predicted Accuracy')
+
+# Add a colorbar to show the mapping of colors to algorithms
+cbar = plt.colorbar(sc, ticks=[0, 1, 2],label='Algorithm')
+cbar.ax.set_yticklabels(strategy_dic)  # Annotation for the colorbar
+# cbar.ax.set_yticklabels(['Unidentified', 'Forward Algorithms', 'Backward Algorithms'])
+# Show plot
+plt.tight_layout()
+plt.show()
 
 
 # Prepare a DataFrame from accuracy_data for easier manipulation
