@@ -1,6 +1,6 @@
 # Reproducibility Materials for "From Strategic Narratives to Code-Like Cognitive Models: An LLM-Based Approach in a Sorting Task"
 
-This repository contains the materials necessary for reproducing the results presented in our paper, which serves as an extension of the work by Thompson et al., 2022. The paper introduces a novel approach to analyzing strategic narratives and generating code-like cognitive models to mimic human-like sorting behaviors using Large Language Models (LLMs), specifically GPT-4. This work has been accepted by The 1st Proceedings of the Conference on Language Modeling (COLM)!
+This repository contains the materials necessary for reproducing the results presented in our paper, which serves as an extension of the work by Thompson et al., 2022. The paper introduces a novel approach to analyzing strategic narratives and generating code-like cognitive models to mimic human-like sorting behaviors using Large Language Models (LLMs), specifically GPT-4. This work has been accepted by __The 1st Proceedings of the Conference on Language Modeling (COLM)__!
 
 ## Overview
 
