@@ -1,6 +1,6 @@
 # Reproducibility Materials for "From Strategic Narratives to Code-Like Cognitive Models: An LLM-Based Approach in a Sorting Task"
 
-This repository contains the materials necessary for reproducing the results presented in our paper, which serves as an extension of the work by Thompson et al., 2022. The paper introduces a novel approach to analyzing strategic narratives and generating code-like cognitive models to mimic human-like sorting behaviors using Large Language Models (LLMs), specifically GPT-4.
+This repository contains the materials necessary for reproducing the results presented in our paper, which serves as an extension of the work by Thompson et al., 2022. The paper introduces a novel approach to analyzing strategic narratives and generating code-like cognitive models to mimic human-like sorting behaviors using Large Language Models (LLMs), specifically GPT-4. This work has been accepted by __[The 1st Proceedings of the Conference on Language Modeling (COLM)](https://colmweb.org/index.html)__!
 
 ## Overview
 
@@ -10,10 +10,11 @@ This paper illustrates how large language models can turn verbal reports into pr
 
 - **strategy_text_analysis.py**: Analyzes text embeddings and represents and predicts behaviorally discovered strategies.
 - **code_generation.py**: Generates programming codes as cognitive models for human-like sorting behaviors by calling the GPT-4 API.
-- **executing_codes.py**: Extracts, debugs, and simulates codes for post-hoc analysis (to compare with human data) and comprehensive simulations (to evaluate how codes are algorithmically alike from each other and to compare to standard algorithms).
-- **post_hoc_comparison.py**: Evaluates how well the generated code-like models predict true human behaviors and captures human-related effects.
+- **executing_codes.py**: Extracts, debugs, and simulates codes for posthoc analysis (to compare with human data) and comprehensive simulations (to evaluate how codes are algorithmically alike from each other and to compare to standard algorithms).
+- **post_hoc_comparison.py**: Evaluate how well the generated code-like models predict true human behaviors and captures human-related effects.
 - **program_analysis.py**: Analyzes the representation of descriptions, codes, and simulated behaviors. It also attributes generated code-like models to standard algorithms.
-- **LLM_generated_description**: Generates strategy descriptions and the codes based on these descriptions for each standard algorithm. It is used for a recovery test to evaluate the self-consistency of the LLM in understanding sorting algorithms.
+- **LLM_generated_description.py**: Generates strategy descriptions and the codes based on these descriptions for each standard algorithm. It is used for a recovery test to evaluate the self-consistency of the LLM in understanding sorting algorithms.
+- **algorithm_prediction.py**: Predict standard algorithms from the strategy descriptions by several LLMs and compare the predictive performance of the closet standard algorithms (predicted before) and generated codes.
 
 ### Data Files
 
@@ -33,7 +34,7 @@ All permutation results are kept with full samples. Please be aware that to repl
 
 
 
-## Below is the Readme content from the original paper about the raw data strcture. Sources from [Thompson et.al., 2022](https://www.science.org/doi/10.1126/science.abn0915)
+# Below is the Readme content from the original paper about the raw data strcture. Sources from [Thompson et.al., 2022](https://www.science.org/doi/10.1126/science.abn0915)
 
 ## Experiment codebase
 The codebase we used to conduct the experiment is included in the `experiment/` directory. This codebase relies on [Dallinger](https://github.com/Dallinger/Dallinger).
