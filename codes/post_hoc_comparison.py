@@ -362,7 +362,7 @@ for participant, accuracy_data in subject_average_standard_accuracy.items():
 LLM_predicted_accuracy = {}
 LLM_algorithm_list = []
 LLM_id_list = []
-target_model = 'meta-llama/Meta-Llama-3-70B-Instruct'
+target_model = 'gpt-4-0125-preview'
 for participant, accuracy_data in LLM_codes_data.items():
     # Find the algorithm with the highest average accuracy for the participant
     LLM_predicted_algorithm = LLM_codes_data[participant]['algorithm_classification'][target_model]
@@ -391,6 +391,7 @@ x_data = [LLM_predicted_accuracy[participant]['predicted_accuracy'] for particip
 y_data = [pre_assigned_predicted_accuracy[participant]['pre_assigned_accuracy'] for participant, participant_info in codes_data.items() if participant in id_list and participant in LLM_id_list]
 
 merged_algorithm_list = [int(participant_data_df.at[participant, 'algorithm'])for participant, participant_info in codes_data.items() if participant in id_list and participant in LLM_id_list]
+
 for index, algorithm in enumerate(merged_algorithm_list):
     if algorithm > 8:
         merged_algorithm_list[index] -= 8

@@ -10,7 +10,7 @@ import pandas as pd
 import numpy as np
 import re
 import itertools
-import openai
+from openai import OpenAI
 import random
 import signal
 from contextlib import contextmanager
@@ -98,7 +98,7 @@ def clean_get_function(code_str):
      
      return sort_function
 
-def pre_exam_for_participant(participant_id, codes_data):
+def pre_exam_for_participant(model, participant_id, codes_data):
     """
     Exam the codes before large-scale simulations. Catch and fix the code bugs within GPT-4 closed-loop.
 
@@ -136,19 +136,19 @@ def pre_exam_for_participant(participant_id, codes_data):
             if attempts > 0:
                 print("Successful correction!")
             break  # Success, exit the loop
-        # This code is commented since can only work in Linux to break the thread of infinite loop
+        # # This code is commented since can only work in Linux to break the thread of infinite loop
         # except TimeoutException as t: 
         #     print(f"Attempt {attempts + 1}: Infinite loop during simulation for participant {participant_id}: {t}")
         #     error = 'The code is running out of time and likely stuck in infinite loop!'
-        #     corrected_code = automantic_codes_correction(description, corrected_code, error)
+        #     corrected_code = automantic_codes_correction(model,description, corrected_code, error)
         #     if corrected_code is None:
-        #         print("Failed to get correction from GPT-4.")
+        #         print(f"Failed to get correction from (model).")
         #         return
-            attempts += 1
+        #     attempts += 1
         except Exception as e:
             print(f"Attempt {attempts + 1}: Error during simulation for participant {participant_id}: {e}")
             # Request correction from GPT-4
-            corrected_code = automantic_codes_correction(description, corrected_code, str(e))
+            corrected_code = automantic_codes_correction(model, description, corrected_code, str(e))
             if corrected_code is None:
                 print("Failed to get correction from GPT-4.")
                 break
@@ -256,10 +256,10 @@ def execute_standard_simmulation_for_participant(participant_id, standard_codes_
     
      
     
-def automantic_codes_correction(text_description, original_codes, errors):
+def automantic_codes_correction(model,text_description, original_codes, errors):
 
     fixed_instruction = """
-Fix the Python sorting function 'human_like_sorting',which is directly executable and effective for a general sorting task, based on a strategic approach to sorting a list of items. The function should simulate the decision-making process humans might use when sorting, without direct comparison to a known 'true order'. The function must:
+Create a Python sorting function 'human_like_sorting',which is directly executable and effective for a general sorting task, based on a strategic approach to sorting a list of items. The function should simulate the decision-making process humans might use when sorting, without direct comparison to a known 'true order'. The function must:
 
 1. Accept 'initial_stimuli' as a list of items to be sorted, with 'true_order' available only to the internal 'attempt_swap' function for providing feedback on swap actions. 'True_order' represents the correct order of items and is used to simulate feedback on whether a swap action brings items closer to their desired order:
 
@@ -273,15 +273,17 @@ Fix the Python sorting function 'human_like_sorting',which is directly executabl
                 return True, current_order
         return False, current_order
 
-2. Return a log of actions attempted, regardless of the outcome, formatted as tuples of item indices attempted for swapping, as well as the outcome of this attempt. A 'finish' action signals the end of the sorting process. This log tracks the sorting actions as well as the outcome of the comparison, simulating a step-by-step decision-making process.
+2. The attempt_swap function should be defined within human_like_sorting, so calling attempt_swap from within human_like_sorting is sufficient to run simulations.
 
-3. Contain all necessary logic for sorting within the function, making it capable of sorting lists of any length using basic operations. The function should not depend on external libraries or Python's built-in sorting functions for its core sorting logic. To avoid inifinte loop, the function should set a hard limit up to 50 comparison attempts and always ended up with a 'finish'. All the basic functions should be correctly used (if used).
+3. Return a log of actions attempted, regardless of the outcome, formatted as tuples of item indices attempted for swapping, as well as the outcome of this attempt. A 'finish' action signals the end of the sorting process. This log tracks the sorting actions as well as the outcome of the comparison, simulating a step-by-step decision-making process.
 
-4. Refrain from using 'true_order' for direct comparisons with 'current_order' to assess sorting completion. Instead, infer the completion through the sorting process itself, akin to how a person might determine they have finished sorting without knowing the exact 'true_order'. 'true_order' can only be used in the 'attempt_swamp' function.
+4. Contain all necessary logic for sorting within the function, making it capable of sorting lists of any length using basic operations. The function should not depend on external libraries or Python's built-in sorting functions for its core sorting logic. To avoid inifinte loop, the function should set a hard limit up to 50 comparison attempts and always ended up with a 'finish'. All the basic functions should be correctly used (if used).
+
+5. Refrain from using 'true_order' for direct comparisons with 'current_order' to assess sorting completion. Instead, infer the completion through the sorting process itself, akin to how a person might determine they have finished sorting without knowing the exact 'true_order'. 'true_order' can only be used in the 'attempt_swamp' function.
 
 Focus on generating executable, valid Python code that effectively sorts 'initial_stimuli' into order. The code should first and foremost be functional and capable of performing the sorting task well under general conditions. Once functional validity is ensured, align the code as closely as possible with the strategic description provided, within the bounds of simulating human-like sorting behavior under fair computational constraints.
 
-Please provide only the modified function, ready for direct execution with 'initial_stimuli' and 'true_order' inputs. Don't include any comments, explainations, notes or examples.
+Please provide only the implemented function, ready for direct execution with 'initial_stimuli' and 'true_order' inputs. Don't include any comments, explainations, notes or examples.
 """
 
     prompt = (
@@ -294,15 +296,27 @@ Please provide only the modified function, ready for direct execution with 'init
     tmp_message =  [{"role": "assistant", "content":fixed_instruction},
         {"role": "user", "content":prompt}]
     
-    response = openai.ChatCompletion.create(
-        model = 'gpt-4-turbo-preview',
+    if 'gpt' in model:
+        api_key = 'Your OpenAI API key'
+        url = 'https://api.openai.com/v1/chat/completions'
+    elif 'llama' in model:
+        api_key="Your Deepinfra API key"
+        url ="https://api.deepinfra.com/v1/openai"
+        
+    openai = OpenAI(
+        api_key=api_key,
+        base_url=url,
+    ) 
+    
+    response = openai.chat.completions.create(
+        model = model,
         messages = tmp_message,
         temperature=0.1,
         max_tokens=1024,
         seed = 2024
         )
     
-    corrected_codes = response['choices'][0]['message']['content']
+    corrected_codes = response.choices[0].message.content
     return corrected_codes
 
 def update_codes_data_with_true_behavior(codes_data, raw_behavioral_data):
@@ -367,7 +381,7 @@ dir_name= 'C:/Users/51027/Documents/GitHub/sorting_algorithm_text_analysis/data'
 
 strategy_dic = ['Unidentified','gnome sort','selection sort','insert sort','bubble sort','comb sort','modified selection sort','shaker sort','successive sweeps']
 
-openai.api_key = 'xxx' # YOUR OWN API
+# openai.api_key = 'xxx' # YOUR OWN API
 
 
 participant_data = pd.read_csv(dir_name+ '/participants.csv')
@@ -397,12 +411,16 @@ column_names =['participant_id','network_id','generation','condition','mean_tria
 raw_behavioral_data = pd.DataFrame(raw_behavioral_data, columns = column_names)
 raw_behavioral_data = raw_behavioral_data.loc[raw_behavioral_data['cloned'] == False]
 
-file_path = 'result/generated_codes_data.json'
+model = "codellama/CodeLlama-34b-Instruct-hf"
+model = 'gpt-4-0125-preview'
+model_save_name = 'CodeLlama-34b-Instruct-hf'
+file_path = f'result/generated_codes_data_{model_save_name}.json'
+
 codes_data = load_data_from_json(file_path)
 
 ##pre-exam the code first
 for participant_id, info in codes_data.items():
-     pre_exam_for_participant(participant_id, codes_data)
+     pre_exam_for_participant(model, participant_id, codes_data)
 
      
 save_data_to_json(file_path, codes_data)

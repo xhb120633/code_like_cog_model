@@ -46,10 +46,10 @@ Please generate the classification based on the narrative provided. Ensure that 
 
 
     if 'gpt' in model:
-        api_key = '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'
+        api_key = 'Your OpenAI API key'
         url = 'https://api.openai.com/v1/chat/completions'
     elif 'llama' in model:
-        api_key="l4jx6PriEh43KWBSYrOViyVRkqmA0LaW"
+        api_key="Your Deepinfra API key"
         url ="https://api.deepinfra.com/v1/openai"
         
     openai = OpenAI(
@@ -164,7 +164,7 @@ for participant, participant_info in codes_data.items():
 file_path = 'result/generated_codes_data.json'
 save_data_to_json(file_path,codes_data)
 
-
+codes_data = load_data_from_json(file_path)
 
 model_algorithm_accuracy = {model: {algorithm: 0 for algorithm in strategy_dic} for model in model_list}
 total_count = {algorithm: 0 for algorithm in strategy_dic}
@@ -223,7 +223,7 @@ plt.title('Accuracy of Model Predictions for Different Algorithms')
 
 # Add legend
 plt.legend()
-
 # Show plot
 plt.tight_layout()
+plt.savefig('strategy_classification_comparison.png',bbox_inches='tight', dpi = 300)
 plt.show()
