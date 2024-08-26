@@ -2,6 +2,8 @@
 
 This repository contains the materials necessary for reproducing the results presented in our paper, which serves as an extension of the work by Thompson et al., 2022. The paper introduces a novel approach to analyzing strategic narratives and generating code-like cognitive models to mimic human-like sorting behaviors using Large Language Models (LLMs), specifically GPT-4. This work has been accepted by __[The 1st Proceedings of the Conference on Language Modeling (COLM)](https://colmweb.org/index.html)__!
 
+Please see our original paper [here](https://openreview.net/forum?id=1Tny4KgGO2#discussion)!
+
 ## Overview
 
 This paper illustrates how large language models can turn verbal reports into programming codes, serving as cognitive models to predict and interpret human behaviors in a sorting task. This README provides an overview of each script and its role in the research process, as well as information on how to replicate our findings and use our data.
